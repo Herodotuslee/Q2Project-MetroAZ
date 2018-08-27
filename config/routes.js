@@ -10,6 +10,7 @@ module.exports = function(app){
     app.get('/about',metro.about);
     app.get('/experience',metro.experience);
     app.get('/equipment',metro.equipment);
+    app.post('/contactus',metro.contactus);
 
 
 //EMPLOYEE AUTHORIZATION
@@ -17,13 +18,14 @@ module.exports = function(app){
     app.post('/login',employee.login);
     app.get('/logout',admin.logout);
     app.get('/admin',admin.adminPage);
+    app.get('/contact',metro.contact);
 
     app.use(authenticateEmployee);
 
     app.get('/clock',employee.clockPage);
 
 //ADMIN AUTHORIZATION
-    app.get('/contact',metro.contact);
+
 
     app.post('/admin',admin.login);
 

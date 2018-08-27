@@ -17,5 +17,14 @@ module.exports = {
   contact: function(req, res) {
     res.render("contact")
   },
+  contactus:(req,res)=>{
+    knex('inbox').insert({
+      name:req.body.name,
+      email:req.body.email,
+      content:req.body.content,
+    }).then(()=>{
+      res.redirect("/");
+    })
+  },
 
 }
