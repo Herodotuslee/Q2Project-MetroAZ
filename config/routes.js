@@ -4,9 +4,9 @@ const employee = require("../controllers/employee.js");
 const admin = require("../controllers/admin.js")
 module.exports = function(app){
 
-  app.get('/', template.index);
+    app.get('/', template.index);
   // AUTHORIZATION
-    app.get('/login',employee.loginPage);
+    app.get('/login',employee.login);
     app.post('/register',employee.register);
     app.post('/login',employee.login);
 
