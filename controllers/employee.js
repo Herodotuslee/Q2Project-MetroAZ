@@ -2,6 +2,7 @@ const knex = require("../db/knex.js");
 
 module.exports = {
   loginPage:(req,res)=>{
+    // res.send('ok')
     res.render("login")
   },
   register:(req, res)=>{
@@ -14,11 +15,12 @@ module.exports = {
     })
   },
   login:(req,res)=>{
+
     knex('employee').where("email",req.body.email)
     .then((result)=>{
       let employee = result[0];
       if(employee.password===req.body.password){
-        req.session.guest_id=employee.id;
+        req.session.employee_id=employee.id;
         // res.send('ok')
         res.redirect("/")
       }else{
