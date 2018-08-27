@@ -15,27 +15,28 @@ module.exports = function(app){
 //EMPLOYEE AUTHORIZATION
     app.post('/register',employee.register);
     app.post('/login',employee.login);
+    app.get('/logout',admin.logout);
+    app.get('/admin',admin.adminPage);
 
     app.use(authenticateEmployee);
 
 //ADMIN AUTHORIZATION
     app.get('/contact',metro.contact);
 
-    app.get('/admin',admin.adminPage);
     app.post('/admin',admin.login);
-    app.get('/logout',admin.logout);
+
 
     app.use(authenticateAdmin);
-
-
 
 }
 
 
 function authenticateEmployee(req,res,next){
   if(!req.session.employee_id&&!req.session.admin_id){
+    // res.send('not ok')
     res.redirect('/login')
   } else {
+    // res.send('ok')
     next();
   }
 }

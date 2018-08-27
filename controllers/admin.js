@@ -12,7 +12,7 @@ module.exports = {
       if(admin.password===req.body.password){
         req.session.admin_id=admin.id;
         // res.send('ok')
-          res.redirect("/blog")
+          res.redirect("/contact")
         }else{
           res.redirect("/");
           // ADD~SHOW WRONG PASSWORD
@@ -20,8 +20,9 @@ module.exports = {
       })
     },
   logout:(req,res)=>{
+    // res.send('ok')
       req.session.admin_id=null;
-      req.session.user_id=null;
+      req.session.employee_id=null;
       req.session.save(()=>{
         res.redirect("/login")
       })
