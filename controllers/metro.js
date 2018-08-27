@@ -17,5 +17,8 @@ module.exports = {
   contact: function(req, res) {
     res.render("contact")
   },
+  projects: function(req, res) {
+    res.render("projects")
+  },
 
 }

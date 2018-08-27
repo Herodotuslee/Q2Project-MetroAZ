@@ -10,6 +10,7 @@ module.exports = function(app){
     app.get('/about',metro.about);
     app.get('/experience',metro.experience);
     app.get('/equipment',metro.equipment);
+    app.get('/projects', metro.projects);
 
 
 //EMPLOYEE AUTHORIZATION
