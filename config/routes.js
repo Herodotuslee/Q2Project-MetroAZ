@@ -1,9 +1,10 @@
 //Update the name of the controller below and rename the file.
 const employee = require("../controllers/employee.js");
+const metro = require("../controllers/metro.js");
 const admin = require("../controllers/admin.js")
 module.exports = function(app){
 
-    // app.get('/', template.index);
+    app.get('/',metro.index);
   // AUTHORIZATION
     app.get('/login',employee.loginPage);
     app.post('/register',employee.register);
@@ -22,7 +23,7 @@ module.exports = function(app){
 
 
 function authenticateEmployee(req,res,next){
-  if(!req.session.user_id&&!req.session.admin_id){
+  if(!req.session.employee_id&&!req.session.admin_id){
     // req.session.flash=null;
     // req.flash("error","Please Login First!");
     res.redirect('/login')
