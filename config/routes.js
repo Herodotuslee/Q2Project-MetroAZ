@@ -12,6 +12,7 @@ module.exports = function(app){
 
     app.use(authenticateEmployee);
     app.use(authenticateAdmin);
+    
     app.get('/admin',admin.adminPage);
     app.post('/admin',admin.login);
     app.get('/logout',admin.logout);

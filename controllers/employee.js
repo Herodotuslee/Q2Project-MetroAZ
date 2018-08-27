@@ -1,10 +1,8 @@
 const knex = require("../db/knex.js");
 
 module.exports = {
-  // CHANGE ME TO AN ACTUAL FUNCTION
   loginPage:(req,res)=>{
-    // console.log(req.flash("error"))
-    res.render("login",{message:req.flash("error")})
+    res.render("login")
   },
   register:(req, res)=>{
     knex('employee').insert({
@@ -18,10 +16,9 @@ module.exports = {
   login:(req,res)=>{
     knex('employee').where("email",req.body.email)
     .then((result)=>{
-
-      let guest = result[0];
-      if(guest.password===req.body.password){
-        req.session.guest_id=guest.id;
+      let employee = result[0];
+      if(employee.password===req.body.password){
+        req.session.guest_id=employee.id;
         // res.send('ok')
         res.redirect("/")
       }else{
@@ -31,7 +28,7 @@ module.exports = {
     })
   },
   logout:(req,res)=>{
-    req.session.guest_id=null;
+    req.session.employee_id=null;
     req.session.save(()=>{
       res.send('ok')
       // res.redirect("/login")
