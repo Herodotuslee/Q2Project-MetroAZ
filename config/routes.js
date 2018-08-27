@@ -4,22 +4,28 @@ const metro = require("../controllers/metro.js");
 const admin = require("../controllers/admin.js")
 module.exports = function(app){
 
+// BASIC
     app.get('/',metro.index);
-  // AUTHORIZATION
     app.get('/login',employee.loginPage);
     app.get('/about',metro.about);
     app.get('/experience',metro.experience);
     app.get('/equipment',metro.equipment);
-    app.get('/contact',metro.contact);
+
+
+//EMPLOYEE AUTHORIZATION
     app.post('/register',employee.register);
-    // app.post('/login',employee.login);
+    app.post('/login',employee.login);
 
     app.use(authenticateEmployee);
-    app.use(authenticateAdmin);
+
+//ADMIN AUTHORIZATION
+    app.get('/contact',metro.contact);
 
     app.get('/admin',admin.adminPage);
     app.post('/admin',admin.login);
     app.get('/logout',admin.logout);
+
+    app.use(authenticateAdmin);
 
 
 
@@ -28,20 +34,15 @@ module.exports = function(app){
 
 function authenticateEmployee(req,res,next){
   if(!req.session.employee_id&&!req.session.admin_id){
-    // req.session.flash=null;
-    // req.flash("error","Please Login First!");
     res.redirect('/login')
   } else {
-    // req.session.flash=null;
-    // req.flash("success","Success to login!");
     next();
   }
 }
 
 function authenticateAdmin(req,res,next){
   if(!(req.session.admin_id)){
-
-    res.redirect('/login')
+      res.redirect('/login')
   } else {
     next();
   }

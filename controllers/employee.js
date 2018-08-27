@@ -20,6 +20,7 @@ module.exports = {
     .then((result)=>{
       let employee = result[0];
       if(employee.password===req.body.password){
+          // req.session.employee_id='1'
         req.session.employee_id=employee.id;
         // res.send('ok')
         res.redirect("/")
