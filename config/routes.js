@@ -7,6 +7,10 @@ module.exports = function(app){
     app.get('/',metro.index);
   // AUTHORIZATION
     app.get('/login',employee.loginPage);
+    app.get('/about',metro.about);
+    app.get('/experience',metro.experience);
+    app.get('/equipment',metro.equipment);
+    app.get('/contact',metro.contact);
     app.post('/register',employee.register);
     // app.post('/login',employee.login);
 
