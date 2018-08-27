@@ -1,8 +1,16 @@
-
 exports.up = function(knex, Promise) {
+  return knex.schema.createTable("clockon",(table)=>{
+    table.increments();
+    table.integer("employee_id")
+    .references("id")
+    .inTable("employee")
+    .onDelete("CASCADE")
+    .index();
+    table.timestamps(true,true);
+  })
 
 };
 
 exports.down = function(knex, Promise) {
-  retur
+  return knex.schema.dropTable("clockon");
 };
