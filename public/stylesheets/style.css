@@ -1,8 +1,70 @@
-*{
-  padding:0px;
-  margin:0px;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-body,html{
-  background-color: red;
+#login-container {
+  text-align: center;
+  margin-top: 220px;
+  width: 400px;
+}
+
+.login-page {
+  background-image: url(https://i.pinimg.com/originals/83/d1/f0/83d1f014386260bd7eeaeeb1b95b589c.jpg);
+  background-position: top;
+  background-size: cover auto auto;
+}
+
+#icon {
+  margin-top: 30px;
+  color: #ffbf00;
+}
+
+form {
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffbf00;
+  border-style: solid;
+  border-width: thick;
+  border-radius: 20px;
+  display: block;
+  height: 380px;
+  border-color: black;
+}
+
+input {
+  height: 45px;
+  width: 250px;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 1;
+  background-color: black;
+  color: #e6e6e6;
+  border-color: #404040;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+  border: 2px solid #404040;
+  -webkit-text-fill-color: #e6e6e6;
+  -webkit-box-shadow: 0 0px 0px 1000px inset;
+}
+
+.loginBtn {
+  border-style: solid;
+  border-width: 2px;
+  width: 100px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 12px;
+  font-weight:500;
+  border-color:#404040;
+}
+
+.loginBtn:hover {
+  background-color: #ffbf00;
+  cursor: pointer;
+  color:white;
+  font-weight:800;
 }
