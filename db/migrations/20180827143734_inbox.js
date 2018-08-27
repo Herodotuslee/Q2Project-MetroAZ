@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     table.string("name");
     table.string("email");
     table.text("content");
+    table.string("status").defaultTo('unread');
     table.timestamps(true,true);
   })
 };

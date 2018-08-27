@@ -28,9 +28,11 @@ module.exports = function(app){
 
 
     app.post('/admin',admin.login);
+    app.get('/inbox',employee.inbox);
+    app.post('/inbox/:message_id',employee.toread);
 
 
-    app.use(authenticateAdmin);
+    // app.use(authenticateAdmin);
 
 }
 
