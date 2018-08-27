@@ -7,10 +7,11 @@
   </div>
   <div class="">
     <%for(let i=0; i< result.length; i++){%>
+      <p>x</p>
       <h4><%=result[i].name%></h4>
       <p><%=result[i].content%></p>
       <hr>
-      <%console.log(result[i].id)%>
+
       <form class="" action="/inbox/<%result[i].id%>" method="post">
         <button type="submit" name="button">read</button>
       </form>
