@@ -20,6 +20,8 @@ module.exports = function(app){
 
     app.use(authenticateEmployee);
 
+    app.get('/clock',employee.clockPage);
+
 //ADMIN AUTHORIZATION
     app.get('/contact',metro.contact);
 

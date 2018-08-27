@@ -6,9 +6,10 @@ exports.up = function(knex, Promise) {
     .inTable("employee")
     .onDelete("CASCADE")
     .index();
-    table.string("clock_in_out")
-    table.date('clockin_date').defaultTo(knex.fn.now(6));
-    table.time('clockin_time').defaultTo(knex.fn.now(6));
+    table.boolean("sick");
+    table.boolean ("clock_in_out")
+    table.date('clockin_date').defaultTo(knex.fn.now(1));
+    table.time('clockin_time').defaultTo(knex.fn.now(1));
     table.timestamps(true,true);
   })
 

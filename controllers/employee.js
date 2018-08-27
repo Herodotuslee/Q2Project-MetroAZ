@@ -37,4 +37,8 @@ module.exports = {
       // res.redirect("/login")
     })
   },
+  clockPage:(req,res)=>{
+    res.render("clockin")
+
+  }
 }
