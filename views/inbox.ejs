@@ -11,25 +11,38 @@
         <a href="/inbox/completed">Completed</a>
       </div>
     </div>
+
     <br><br>
-    <div class="">
-      <%for(let i=0; i< result.length; i++){%>
-        <h4><%=result[i].name%></h4>
-        <p>
-          <%=result[i].content%>
-        </p>
-        <div class="row" id="marked-inbox-btns">
-          <div class="col-12" id="read-delete">
-        <form class="inbox-btns" action="/inbox/read/<%=result[i].id%>" method="post">
-              <button class="inbox-btn" type="submit" name="button">Save</button>
-        </form>
-        <form class="inbox-btns" action="/inbox/delete/<%=result[i].id%>" method="get">
-          <button class="inbox-btn" type="submit" name="button">Delete</button>
-        </form>
-        <hr id="inbox-hr">
-      </div>
-    </div>
-    </body>
-        <%}%>
+
+    <!-- List of bookings -->
+    <%if(result.length >= 3) {%>
+      <div class="gridContainer">
+        <% }else if(result.length == 2) {%>
+          <div class="gridContainer2">
+            <%} else {%>
+              <div class="gridContainer1">
+                <%}%>
+                  <% for(var i = 0; i<result.length; i++){ %>
+                    <div class="inbox gridItem">
+
+                      <h4 class=""><%= result[i].name %></h4>
+                      <b class=""><%= result[i].content %></b>
+                      <br>
+
+
+                      <!-- Buttons -->
+                      <form action="/inbox/read/<%=result[i].id%>" method="post">
+                            <button class="inboxBtns" type="submit" name="button">Save</button>
+                      </form>
+                      <form action="/inbox/delete/<%=result[i].id%>" method="get">
+                        <button class="inboxBtns" type="submit" name="button">Delete</button>
+                      </form>
+
+
+                    </div>
+                    <% } %>
+              </div>
+
+
 
 <% include ./partials/footer %>

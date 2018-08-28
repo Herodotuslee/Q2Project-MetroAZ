@@ -1,9 +1,43 @@
 <% include ./partials/header %>
     <p>timeLog</p>
-    <h1>Emloyee {name}</h1>
+
+
+      <form class="" action="/timelog/" method="get">
+        <select class="" name="tag">
+          <%let list =[]%>
+          <%result.forEach(item=>{%>
+            <%if(!(list.includes(item.name))&& item.name!==null){%>
+              <%list.push(item.name)%>
+            <%}%>
+          <%})%>
+          <%list.forEach(name=>{%>
+            <option value=<%=name%>><%=name%></option>
+          <%})%>
+        </select><br><br>
+      </form>
+
+      <h1><%=result[0].name%></h1><hr>
+
+
+    <div class="">
+      <%for(let i=0;i< result.length;i++){%>
+        <h4>Date:<%=result[i].clockin_date%></h4><br>
+        <%if(result[i].clockin_time){%>
+            <h5>Clock in:<%=result[i].clockin_time%></h5><br>
+
+        <%}else{%>
+          <h5>Clock out:<%=result[i].clockout_time%></h5><hr>
+        <%}%>
+
+
+
+      <%}%>
+
+    </div>
+
     <h2>choose the months {Jun}</h2>
     <h1>log</h1>
     <h1>Graph</h1>
-    <h1>{number} houes</h1>
+    <h1>{number} hours</h1>
 
 <% include ./partials/footer %>
