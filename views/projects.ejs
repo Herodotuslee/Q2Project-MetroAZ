@@ -1,4 +1,3 @@
-
 <% include ./partials/header %>
 <!-- Header and Nav bar -->
 
@@ -7,31 +6,25 @@
 <!-- Carousel Background -->
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <% for(var i = 0; i<project.length; i++){ %>
-
   <!-- Indicators -->
+        <% for(var i = 0; i<project.length; i++){ %>
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="<%= project[i].id + 1%>" class="active"></li>
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="<%= project[i].id%>" class=""></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-
     <div class="carousel-item">
-
       <img class="d-block w-100" src="<%= project[i].img_url %>" data-color="violet" alt="Image">
       <div class="carousel-caption d-md-block">
         <h5><%= project[i].name %></h5>
         <span class="text-muted"> <%= project[i].address
           %></span></h2>
-
         <p class="lead"> <%= project[i].description %></p>
     </div>
-
       </div>
-
     </div>
-
 <% } %>
 
   </div>
@@ -60,7 +53,6 @@ var $wHeight = $(window).height();
 $item.eq(0).addClass('active');
 $item.height($wHeight);
 $item.addClass('full-screen');
-
 $('.carousel img').each(function() {
   var $src = $(this).attr('src');
   var $color = $(this).attr('data-color');
@@ -70,12 +62,10 @@ $('.carousel img').each(function() {
   });
   $(this).remove();
 });
-
 $(window).on('resize', function (){
   $wHeight = $(window).height();
   $item.height($wHeight);
 });
-
 $('.carousel').carousel({
   interval: 6000,
   pause: "false"

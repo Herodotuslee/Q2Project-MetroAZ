@@ -86,3 +86,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.index-btn-box{
+  display:inline-block;
+}
