@@ -1,18 +1,7 @@
 <% include ./partials/header %>
   <div class="mainContainer">
 
-    <!-- Parallax Banner -->
-
-
-    <div class="parallax-window" data-parallax="scroll" data-image-src="/images/road.jpg">
-
-
-        <h1 class="headline">Construction Survey . Building Survey . Engineering</h1>
-
-    </div>
-
-
-    <!-- Parallax banner ends -->
+  <% include ./partials/topBanner %>
 
     <div class="row about">
       <div class="col-6">
@@ -31,12 +20,5 @@
     </div>
   </div>
 
-
+  <% include ./partials/bottomBanner %>
   <% include ./partials/footer %>
-<script type="text/javascript">
-
-  $(document).ready(function () {
-    $('div.hidden').fadeIn(7000).removeClass('hidden');
-});
-
-</script>

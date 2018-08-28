@@ -37,12 +37,35 @@
  box-shadow: 2px 2px 20px grey;
 }
 
+/* Contact PAGE  */
+.contactPage {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+.contactForm input {
+  width: 300px;
+  margin-bottom: .5%;
+  border-radius: 5px;
+}
+
+.contactForm textarea {
+  width: 500px;
+  border-radius: 5px;
+}
+
+.contactForm button {
+  width: 80px;
+  border-radius: 5px;
+}
+
+
 /* LOGIN PAGE */
 #login-container{
  text-align: center;
- display: inline-block;
- margin-top:30px;
- margin-bottom:60px;
+ margin-top:8%;
+ margin-bottom: 10%;
 }
 
 #login-icon{

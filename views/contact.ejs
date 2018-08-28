@@ -1,15 +1,18 @@
 <% include ./partials/header %>
-<div class="">
+  <% include ./partials/topBanner %>
+<div class="contactPage">
   <h1>Request More Information</h1>
   <p>Use this form to contact us to get more information about our company, products, or services.</p>
+  <div class="contactForm">
   <form class="" action="/contactus" method="post">
-    <label for="name">Name:</label>
-    <input type="text" name="name">
-    <label for="email"></label>
-    <input type="text" name="email">
-    <label for="content"></label>
-    <input type="text" name="content">
+    <input type="text" name="name" placeholder="Name" autofocus="autofocus">
+    <br>
+    <input type="text" name="email" placeholder="Email">
+    <br>
+    <textarea name="content" rows="8" cols="80" placeholder="Email Content"></textarea>
+    <br>
     <button type="submit" name="button">Submit</button>
+    </div>
   </form>
 </div>
 <% include ./partials/footer %>
