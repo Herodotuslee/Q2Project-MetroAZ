@@ -1,23 +1,28 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <title>Login</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+<% include ./partials/header %>
 
-<body class="login-page">
   <div class="container-fluid" id="login-container">
+        <h5>EMPLOYEE LOGIN</h3>
         <form class="login-form" action="login" method="post">
+
           <i class="fas fa-users fa-8x" id="icon"></i><br><br>
           <input type="text" name="email" placeholder="Email"><br><br>
           <input type="password" name="password" placeholder="Password"><br><br>
           <a href="#"><button class="loginBtn" type="submit">login</button></a>
         </form>
-  </div>
-</body>
 
-</html>
+
+
+<!-- DONT REMOVE FUNCTIONALITY -->
+        <div class="login-box">
+          <h5>Admin Login</h5><br>
+          <form class="" action="/admin" method="post">
+            <input type="text" name="email" placeholder="Email..."><br>
+            <input type="password" name="password" placeholder="please enter your password"><br>
+            <button class='btn' type="submit">Login</button>
+          </form>
+        </div>
+  </div>
+
+
+<% include ./partials/footer %>

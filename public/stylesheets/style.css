@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-* {
-  padding: 0;
-  margin: 0;
+*{
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
 }
-
 #login-container {
   text-align: center;
   margin-top: 220px;
@@ -21,7 +20,7 @@
   color: #ffbf00;
 }
 
-form {
+/* form {
   background: rgba(0, 0, 0, 0.8);
   color: #ffbf00;
   border-style: solid;
@@ -30,9 +29,9 @@ form {
   display: block;
   height: 380px;
   border-color: black;
-}
+} */
 
-input {
+/* input {
   height: 45px;
   width: 250px;
   border-style: solid;
@@ -42,13 +41,13 @@ input {
   background-color: black;
   color: #e6e6e6;
   border-color: #404040;
-}
+} */
 
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+/* input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
   border: 2px solid #404040;
   -webkit-text-fill-color: #e6e6e6;
   -webkit-box-shadow: 0 0px 0px 1000px inset;
-}
+} */
 
 .loginBtn {
   border-style: solid;
@@ -68,10 +67,43 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   cursor: pointer;
   color:white;
   font-weight:800;
-=======
-*{
-  padding:0px;
-  margin:0px;
-  box-sizing: border-box;
->>>>>>> 0ad4369c3ffdd49a474b062b79286a11a7d1a72c
+/* Projects page */
+/* html,body {
+    height:100%;
+	width:100%;
+	position:relative;
+} */
+#background-carousel{
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index:-1;
+}
+.carousel,
+.carousel-inner {
+	width:100%;
+	height:100%;
+	z-index:0;
+	overflow:hidden;
+}
+.item {
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-size:cover;
+	z-index:0;
+}
+
+#content-wrapper {
+	position:absolute;
+	z-index:1 !important;
+	min-width:100%;
+	min-height:100%;
+}
+.well {
+    opacity:0.85
+}
+
+.index-btn-box{
+  display:inline-block;
 }
