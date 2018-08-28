@@ -14,10 +14,6 @@
   box-shadow: 2px 2px 30px grey;
 }
 
-.navbar {
-  box-shadow: 2px 2px 10px grey;
-}
-
 /* Upcoming projects bottom banner */
 
 .upcoming {
@@ -26,6 +22,7 @@
   height: 200px;
   font-size: 2em;
   background-color: #EDEDED;
+  box-shadow: 200px 20px 10px pink;
 }
 
 .contactUs {
