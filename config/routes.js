@@ -27,25 +27,16 @@ module.exports = function(app) {
   //ADMIN AUTHORIZATION
 
 
-<<<<<<< HEAD
+
     app.post('/admin',admin.login);
     app.get('/inbox',employee.inbox);
     app.post('/inbox/:message_id',employee.toread);
 
 
-    // app.use(authenticateAdmin);
-=======
+
   app.post('/admin', admin.login);
   app.get('/projects/add', admin.addProjectPG);
   app.post('projects/add', admin.addProject);
-
-
-
-<<<<<<< HEAD
-=======
-  app.use(authenticateAdmin);
->>>>>>> 1fb1934598832d6f277ce29aa2ecde66dee4e60f
->>>>>>> 0e5dbaced336b3a5ececca16784772f60c695096
 
 }
 
