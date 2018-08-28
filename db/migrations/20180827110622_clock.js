@@ -6,11 +6,11 @@ exports.up = function(knex, Promise) {
     .inTable("employee")
     .onDelete("CASCADE")
     .index();
-    table.boolean("sick");
-    table.boolean ("clock_in");
-    table.boolean("clock_out");
     table.date('clockin_date').defaultTo(knex.fn.now(1));
+    table.time('clockout_time').defaultTo(knex.fn.now(1));
     table.time('clockin_time').defaultTo(knex.fn.now(1));
+    table.text("nowtime").defaultTo(Date.now())
+    table.float('workingtime');
     table.timestamps(true,true);
   })
 
