@@ -44,6 +44,19 @@ module.exports = {
       })
   },
   timelog:(req,res)=>{
-      res.render('timelog')
-  }
+    knex('employee')
+    .leftJoin('clock','employee.id','employee_id')
+    .then((result)=>{
+      // res.send(result)
+      res.render('timelog',{result})
+    })
+  },
+  // showTimeLog:(req,res)=>{
+  //   knex('employee').where('name','Albert')
+  //   .join('clock','employee_id',1)
+  //   .then((result)=>{
+  //     res.render('timelog',{result})
+  //   })
+  //
+  // }
 }
