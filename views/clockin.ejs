@@ -1,6 +1,26 @@
 
 <% include ./partials/header %>
-    <h1>Clock In</h1>
-    <h2>Still have</h2>
-    <h2>Calender</h2>
+<div class="">
+  <form class="" action="clock/in" method="post">
+    <button class='btn' type="submit" name="button">Clock In</button>
+  </form>
+  <form class="" action="clock/out" method="post">
+    <button  class='btn' type="submit" name="button">Clock Out</button>
+  </form>
+  <h1>TODAY IS : <%=result[0].clockin_date%></h1>
+  <h1>TIMECARD</h1>
+  <%result.forEach((item)=>{%>
+    <%if(item.clock_in===true){%>
+        <h4>Clock in at <%=item.clockin_time%></h4><br>
+    <%}else{%>
+        <h4>Clock out at <%=item.clockin_time%></h4><br>
+    <%}%>
+  <%})%>
+
+  <p>You still have {number} times day off</p>
+  <p>Today you work {number} hours and {number} minuts</p>
+  <p>You work {number} this month</p>
+
+</div>
+
 <% include ./partials/footer %>
