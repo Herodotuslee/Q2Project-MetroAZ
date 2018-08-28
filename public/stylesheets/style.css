@@ -1,11 +1,20 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 220569de305859db862dca84ff15caad709b915a
 *{
   padding:0px;
   margin:0px;
   box-sizing: border-box;
+<<<<<<< HEAD
 }
 
 /* LOGIN PAGE */
 #login-container{
+=======
+
+#login-container {
+>>>>>>> 220569de305859db862dca84ff15caad709b915a
   text-align: center;
   margin-top:155px;
 }
