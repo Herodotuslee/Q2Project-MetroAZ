@@ -17,7 +17,16 @@ module.exports = {
   contact: function(req, res) {
     res.render("contact")
   },
+<<<<<<< HEAD
   contactus: (req, res) => {
+=======
+
+  projects: function(req, res) {
+    res.render("projects")
+  },
+
+  contactus:(req,res)=>{
+>>>>>>> 0e5dbaced336b3a5ececca16784772f60c695096
     knex('inbox').insert({
       name: req.body.name,
       email: req.body.email,
@@ -25,6 +34,7 @@ module.exports = {
     }).then(() => {
       res.redirect("/");
     })
+<<<<<<< HEAD
   },
 
   // Projects
@@ -35,6 +45,7 @@ module.exports = {
           project: results
         })
       })
+=======
+>>>>>>> 0e5dbaced336b3a5ececca16784772f60c695096
   },
-
 }

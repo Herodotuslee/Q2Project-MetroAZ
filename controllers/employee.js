@@ -33,12 +33,27 @@ module.exports = {
   logout:(req,res)=>{
     req.session.employee_id=null;
     req.session.save(()=>{
-      res.send('ok')
-      // res.redirect("/login")
+      // res.send('ok')
+      res.redirect("/login")
     })
   },
   clockPage:(req,res)=>{
     res.render("clockin")
 
+  },
+  inbox:(req,res)=>{
+    knex('inbox').where('status','unread')
+    .then((result)=>{
+      res.render('inbox',{result})
+    })
+
+  },
+  toread:(req,res)=>{
+    res.send('ok')
+    // knex('inbox').where('id',req.params.message_id)
+    // .then((result)=>{
+    //   res.send(result)
+    //
+    // })
   }
 }

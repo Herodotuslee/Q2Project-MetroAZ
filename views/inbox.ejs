@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+<div class="container">
+  <div class="row">
+    <div class="">Unread</div>
+    <div class="">Read</div>
+    <div class="">Replied</div>
+  </div>
+  <div class="">
+    <%for(let i=0; i< result.length; i++){%>
+      <p>x</p>
+      <h4><%=result[i].name%></h4>
+      <p><%=result[i].content%></p>
+      <hr>
+
+      <form class="" action="/inbox/<%result[i].id%>" method="post">
+        <button type="submit" name="button">read</button>
+      </form>
+      <a href="/delete/message/<%result[i].id%>">Delete</a>
+    <%}%>
+
+  </div>
+
+
+</div>
+<% include ./partials/footer %>
