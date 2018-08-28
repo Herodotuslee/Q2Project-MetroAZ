@@ -24,7 +24,7 @@ module.exports = {
     req.session.admin_id = null;
     req.session.employee_id = null;
     req.session.save(() => {
-      res.redirect("/login")
+      res.redirect("/")
     })
   },
 
