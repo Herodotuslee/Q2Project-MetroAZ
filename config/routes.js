@@ -8,7 +8,7 @@ module.exports = function(app) {
   app.get('/', metro.index);
   app.get('/login', employee.loginPage);
   app.get('/about', metro.about);
-  // app.get('/projects', metro.projects);
+  app.get('/projects', metro.projects);
   app.post('/contactus', metro.contactus);
 
 
