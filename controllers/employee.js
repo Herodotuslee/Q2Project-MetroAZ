@@ -23,7 +23,7 @@ module.exports = {
       if(employee.password===req.body.password){
         req.session.employee_id=employee.id;
         // res.send('ok')
-        res.redirect("/clock")
+        res.redirect("/")
       }else{
         res.redirect("/");
         // ADD~SHOW WRONG PASSWORD
@@ -53,27 +53,34 @@ module.exports = {
   today = yyyy + '-' + mm + '-' + dd;
     knex('clock').where('clockin_date',today)
     .then((result)=>{
-      // res.send(result)
       res.render("clockin",{result})
     })
   },
   clockIn:(req, res)=>{
+    let startTime = Date.now();
     knex('clock').insert({
-      clock_in:true,
-      clock_out:false,
+      clockout_time:null,
       employee_id:req.session.employee_id,
+      nowtime:startTime,
     }).then(()=>{
       res.redirect("/clock");
     })
   },
   clockOut:(req, res)=>{
-    knex('clock').insert({
-      employee_id:req.session.employee_id,
-      clock_in:false,
-      clock_out:true,
-    }).then(()=>{
-      res.redirect("/clock");
+    let endTime = Date.now();
+    knex('clock').where('id',req.params.final_id)
+    .then((result_final_id)=>{
+      knex('clock').insert({
+        employee_id:req.session.employee_id,
+        clockin_time:null,
+        nowtime:endTime,
+        workingtime:(endTime-result_final_id[0].nowtime)/1000
+      }).then(()=>{
+        res.redirect("/clock");
+      })
+
     })
+
   },
 //TODAY'S WORKING HOURS
 

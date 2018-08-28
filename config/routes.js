@@ -29,7 +29,7 @@ module.exports = function(app) {
   // CLOCK
   app.get('/clock', employee.clockPage);
   app.post('/clock/in', employee.clockIn);
-  app.post('/clock/out', employee.clockOut);
+  app.post('/clock/out/:final_id', employee.clockOut);
   // INBOX
   app.get('/inbox',employee.inbox);
   app.get('/inbox/read',employee.inboxread);
