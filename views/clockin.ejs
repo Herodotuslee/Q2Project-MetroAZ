@@ -4,16 +4,20 @@
   <form class="" action="clock/in" method="post">
     <button class='btn' type="submit" name="button">Clock In</button>
   </form>
-  <form class="" action="clock/out" method="post">
-    <button  class='btn' type="submit" name="button">Clock Out</button>
-  </form>
+  <%if(result[result.length-1].clockin_time){%>
+    <form class="" action="clock/out/<%=result[result.length-1].id%>" method="post">
+      <button  class='btn' type="submit" name="button">Clock Out</button>
+    </form>
+  <%}%>
+
   <h1>TODAY IS : <%=result[0].clockin_date%></h1>
   <h1>TIMECARD</h1>
   <%result.forEach((item)=>{%>
-    <%if(item.clock_in===true){%>
+    <%if(item.clockin_time){%>
         <h4>Clock in at <%=item.clockin_time%></h4><br>
     <%}else{%>
-        <h4>Clock out at <%=item.clockin_time%></h4><br>
+        <h4>Clock out at <%=item.clockout_time%></h4><br>
+        <h4>Today you worked <%=item.workingtime%> Sec</h4><br>
     <%}%>
   <%})%>
 
