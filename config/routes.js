@@ -34,31 +34,18 @@ module.exports = function(app) {
   app.get('/inbox/delete/:message_id',employee.todelete);
   app.get('/clock',employee.clockPage);
 
-<<<<<<< HEAD
-=======
 
     app.post('/admin',admin.login);
     app.get('/inbox',employee.inbox);
     app.post('/inbox/:message_id',employee.toread);
->>>>>>> 9c2a2bc17ce6ba761da86af5c13f0d8787fc96fe
 
 //BOSS AUTHORIZATION
   app.use(authenticateAdmin);
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 9c2a2bc17ce6ba761da86af5c13f0d8787fc96fe
   app.post('/admin', admin.login);
   app.get('/projects/add', admin.addProjectPG);
   app.post('projects/add', admin.addProject);
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 9c2a2bc17ce6ba761da86af5c13f0d8787fc96fe
 }
 
 
