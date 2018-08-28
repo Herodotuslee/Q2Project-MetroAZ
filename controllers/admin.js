@@ -12,7 +12,7 @@ module.exports = {
         if (admin.password === req.body.password) {
           req.session.admin_id = admin.id;
           // res.send('ok')
-          res.redirect("/contact")
+          res.redirect("/timelog")
         } else {
           res.redirect("/");
           // ADD~SHOW WRONG PASSWORD

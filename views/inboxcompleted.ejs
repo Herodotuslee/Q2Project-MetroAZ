@@ -8,7 +8,7 @@
       <a  href="/inbox/read">Read</a>
     </div>
     <div  class="btn" >
-      <a href="/inbox/completed">Complted</a>
+      <a href="/inbox/completed">Completed</a>
     </div>
   </div>
 
@@ -21,6 +21,7 @@
       <!-- <form class="" action="/inbox/read/<%=result[i].id%>" method="post">
         <button type="submit" name="button">unread</button>
       </form> -->
+      <div class="inbox-stuff">
       <form class="" action="/inbox/complete/<%=result[i].id%>" method="post">
         <button  class='btn btn-primary' type="submit" name="button">read</button>
       </form>
@@ -31,7 +32,7 @@
     <%}%>
 
   </div>
-
+</div>
 
 </div>
 <% include ./partials/footer %>

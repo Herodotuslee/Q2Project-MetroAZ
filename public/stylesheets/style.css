@@ -30,6 +30,26 @@
   font-size:14px;
 }
 
+
+/* INBOX.EJS */
+
+#inbox-container{
+  text-align:center;
+}
+
+form{
+  display:inline-block;
+}
+
+#inbox-btn{
+  height:45px;
+  width:100px;
+  border-radius:5px;
+  margin-top:5px;
+  margin-bottom:15px;
+}
+
+
 /* PROJECTS PAGE */
 
   /* Projects Page  */

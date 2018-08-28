@@ -23,7 +23,7 @@ module.exports = {
       if(employee.password===req.body.password){
         req.session.employee_id=employee.id;
         // res.send('ok')
-        res.redirect("/")
+        res.redirect("/clock")
       }else{
         res.redirect("/");
         // ADD~SHOW WRONG PASSWORD
