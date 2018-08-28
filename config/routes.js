@@ -25,10 +25,16 @@ module.exports = function(app) {
   app.use(authenticateEmployee);
 
 //EMPLOYEE AUTHORIZATION
+
+  // CLOCK
   app.get('/clock', employee.clockPage);
+  app.post('/clock/in', employee.clockIn);
+  app.post('/clock/out', employee.clockOut);
+  // INBOX
   app.get('/inbox',employee.inbox);
   app.get('/inbox/read',employee.inboxread);
   app.get('/inbox/completed',employee.inboxcompleted);
+  // INBOX ACTION
   app.post('/inbox/read/:message_id',employee.toread);
   app.post('/inbox/complete/:message_id',employee.tocomplete);
   app.get('/inbox/delete/:message_id',employee.todelete);

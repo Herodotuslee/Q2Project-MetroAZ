@@ -1,15 +1,9 @@
-<<<<<<< HEAD
+
 *{
   padding:0px;
   margin:0px;
   box-sizing: border-box;
-=======
 
-* {
-  padding: 0;
-  margin: 0;
->>>>>>> 9c2a2bc17ce6ba761da86af5c13f0d8787fc96fe
-}
 #login-container {
   text-align: center;
   margin-top: 220px;

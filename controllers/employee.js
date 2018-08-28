@@ -40,8 +40,43 @@ module.exports = {
 
 // CLOCKIN
   clockPage:(req,res)=>{
-    res.render("clockin")
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth()+1; //January is 0!
+  let yyyy = today.getFullYear();
+  if(dd<10) {
+      dd = '0'+dd
+  }
+  if(mm<10) {
+      mm = '0'+mm
+  }
+  today = yyyy + '-' + mm + '-' + dd;
+    knex('clock').where('clockin_date',today)
+    .then((result)=>{
+      // res.send(result)
+      res.render("clockin",{result})
+    })
   },
+  clockIn:(req, res)=>{
+    knex('clock').insert({
+      clock_in:true,
+      clock_out:false,
+      employee_id:req.session.employee_id,
+    }).then(()=>{
+      res.redirect("/clock");
+    })
+  },
+  clockOut:(req, res)=>{
+    knex('clock').insert({
+      employee_id:req.session.employee_id,
+      clock_in:false,
+      clock_out:true,
+    }).then(()=>{
+      res.redirect("/clock");
+    })
+  },
+//TODAY'S WORKING HOURS
+
 
 // INBOX
 
