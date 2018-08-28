@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 * {
   padding: 0;
   margin: 0;
@@ -11,9 +11,8 @@
 }
 
 .login-page {
-  background-image: url(https://i.pinimg.com/originals/83/d1/f0/83d1f014386260bd7eeaeeb1b95b589c.jpg);
-  background-position: top;
-  background-size: cover auto auto;
+  background-image: url(https://images.unsplash.com/photo-1501791781042-2ba6a5292755?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a66b582b5f0ea51ea43f7c616cc61801&auto=format&fit=crop&w=2100&q=80);
+  background-position: center;
 }
 
 #icon {
@@ -22,14 +21,14 @@
 }
 
 form {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   color: #ffbf00;
   border-style: solid;
   border-width: thick;
   border-radius: 20px;
   display: block;
   height: 380px;
-  border-color: black;
+  border-color:black;
 }
 
 input {
