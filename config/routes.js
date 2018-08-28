@@ -51,7 +51,8 @@ module.exports = function(app) {
 
   app.post('/admin', admin.login);
   app.get('/projects/add', admin.addProjectPG);
-  app.post('projects/add', admin.addProject);
+  app.post('/projects/add', admin.addProject);
+  app.get('/timelog',admin.timelog);
 }
 
 

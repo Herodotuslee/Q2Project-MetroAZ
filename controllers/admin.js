@@ -43,4 +43,7 @@ module.exports = {
         res.redirect('/projects')
       })
   },
+  timelog:(req,res)=>{
+      res.render('timelog')
+  }
 }
