@@ -8,16 +8,20 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
-<body>
-  <div class="container-fluid" id="login-container">
-        <form class="login-form" action="login" method="post">
-          <i class="fas fa-users fa-8x" id="icon"></i><br><br>
-          <input type="text" name="email" placeholder="EMAIL"><br><br>
-          <input type="password" name="password" placeholder="PASSWORD"><br><br>
-          <a href="#"><button class="loginBtn" type="submit">LOGIN</button></a><br></br>
-          <span class="psw" id="forgot"><a href="#">Forgot password?</a></span>
-        </form>
-  </div>
-</body>
 
+<body class>
+  <% include ./partials/header %>
+
+    <div class="container-fluid" id="login-container">
+      <form class="login-form" action="login" method="post">
+
+        <i class="fas fa-users fa-10x" id="login-icon"></i><br><br>
+        <input type="text" id="login-input" name="email" placeholder="EMAIL"><br><br>
+        <input type="password" id="login-input" name="password" placeholder="PASSWORD"><br><br>
+        <a href="#"><button class="loginBtn" type="submit">LOGIN</button></a><br></br>
+        <span class="psw" id="forgot"><a href="#">Forgot password?</a></span>
+      </form>
+    </div>
+</body>
+<% include ./partials/footer %>
 </html>

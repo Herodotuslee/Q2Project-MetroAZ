@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+<div class="container">
+  <div class="row">
+    <div class="btn" >
+      <a   href="/inbox">Unread</a>
+    </div>
+    <div class="btn" >
+      <a  href="/inbox/read">Read</a>
+    </div>
+    <div  class="btn" >
+      <a href="/inbox/completed">Complted</a>
+    </div>
+  </div>
+  <div class="">
+    <%for(let i=0; i< result.length; i++){%>
+      <p>x</p>
+      <h4><%=result[i].name%></h4>
+      <p><%=result[i].content%></p>
+      <hr>
+      <p>sss</p>
+      <form class="index-btn-box" action="/inbox/read/<%=result[i].id%>" method="post">
+        <button class='btn btn-outline-secondary' type="submit" name="button">UnRead</button>
+      </form>
+      <form class="index-btn-box" action="/inbox/complete/<%=result[i].id%>" method="post">
+        <button  class="btn btn-outline-success" type="submit" name="button">Completed</button>
+      </form>
+      <form class="index-btn-box" action="/inbox/delete/<%=result[i].id%>" method="get">
+        <button class='btn btn-outline-danger' type="submit" name="button">X</button>
+      </form>
+
+    <%}%>
+
+  </div>
+
+
+</div>
+<% include ./partials/footer %>
