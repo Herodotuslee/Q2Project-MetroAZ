@@ -1,15 +1,18 @@
 <% include ./partials/header %>
-<div class="container">
+<body class="inbox-ejs">
+<div class="container" id="inbox-container">
   <div class="row">
-    <div class="btn" >
+    <div class="col-12">
+    <div class="btn">
       <a   href="/inbox">Unread</a>
     </div>
-    <div class="btn" >
-      <a  href="/inbox/read">Read</a>
+    <div class="btn">
+      <a  href="/inbox/read">Archive</a>
     </div>
-    <div  class="btn" >
+    <div  class="btn">
       <a href="/inbox/completed">Completed</a>
     </div>
+  </div>
   </div>
 
   <div class="">
@@ -35,4 +38,6 @@
 </div>
 
 </div>
+<br><br>
+</body>
 <% include ./partials/footer %>
