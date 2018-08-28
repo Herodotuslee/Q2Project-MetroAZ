@@ -4,15 +4,15 @@
   margin: 0;
 }
 
+.login-page{
+  background-image: url(https://images.unsplash.com/photo-1501791781042-2ba6a5292755?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a66b582b5f0ea51ea43f7c616cc61801&auto=format&fit=crop&w=2100&q=80);
+  background-position: center;
+}
+
 #login-container {
   text-align: center;
   margin-top: 220px;
   width: 400px;
-}
-
-.login-page {
-  background-image: url(https://images.unsplash.com/photo-1501791781042-2ba6a5292755?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a66b582b5f0ea51ea43f7c616cc61801&auto=format&fit=crop&w=2100&q=80);
-  background-position: center;
 }
 
 #icon {
@@ -21,13 +21,13 @@
 }
 
 form {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   color: #ffbf00;
   border-style: solid;
   border-width: thick;
   border-radius: 20px;
   display: block;
-  height: 380px;
+  height: 400px;
   border-color:black;
 }
 
@@ -70,18 +70,4 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   padding:0px;
   margin:0px;
   box-sizing: border-box;
-
-  /* Projects Page  */
-  h5 {
-  display: inline-block;
-  padding: 10px;
-  background: #B9121B;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.full-screen {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
