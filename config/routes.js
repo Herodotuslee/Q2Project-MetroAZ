@@ -21,7 +21,6 @@ module.exports = function(app) {
   app.get('/admin', admin.adminPage);
   app.get('/contact', metro.contact);
 
-  app.use(authenticateEmployee);
 
   app.get('/clock', employee.clockPage);
 
@@ -29,27 +28,30 @@ module.exports = function(app) {
 
 
   app.post('/admin', admin.login);
+  app.get('/projects/add', admin.addProjectPG);
+  app.post('projects/add', admin.addProject);
 
 
-  app.use(authenticateAdmin);
+
 
 }
 
 
-function authenticateEmployee(req, res, next) {
-  if (!req.session.employee_id && !req.session.admin_id) {
-    // res.send('not ok')
-    res.redirect('/login')
-  } else {
-    // res.send('ok')
-    next();
-  }
-}
 
-function authenticateAdmin(req, res, next) {
-  if (!(req.session.admin_id)) {
-    res.redirect('/login')
-  } else {
-    next();
-  }
-}
+// function authenticateEmployee(req, res, next) {
+//   if (!req.session.employee_id && !req.session.admin_id) {
+//     // res.send('not ok')
+//     res.redirect('/login')
+//   } else {
+//     // res.send('ok')
+//     next();
+//   }
+// }
+//
+// function authenticateAdmin(req, res, next) {
+//   if (!(req.session.admin_id)) {
+//     res.redirect('/login')
+//   } else {
+//     next();
+//   }
+// }
