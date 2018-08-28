@@ -4,6 +4,28 @@
   box-sizing: border-box;
 }
 
+/* Header */
+
+.metroLogo {
+  height: 60px;
+}
+
+/* Upcoming projects bottom banner */
+
+.upcoming {
+  padding-top: 2%;
+  text-align: center;
+  height: 200px;
+  font-size: 2em;
+  background-color: #EDEDED;
+}
+
+.contactUs {
+  height: 2em;
+  width: 8em;
+  border-radius: 10px;
+}
+
 /* LOGIN PAGE */
 #login-container{
   text-align: center;
@@ -52,13 +74,6 @@ form{
 
 /* PROJECTS PAGE */
 
-  /* Projects Page  */
-  /* Projects page */
-  /* html,body {
-      height:100%;
-  	width:100%;
-  	position:relative;
-  } */
   #background-carousel{
   	position:fixed;
   	width:100%;
@@ -97,4 +112,25 @@ form{
 
 .index-btn-box{
   display:inline-block;
+}
+
+/* Main page */
+.mainContainer {
+  text-align: center;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+
+}
+.banner {
+  background-color: pink;
+  height: 25em;
+  background-image: url(/images/road.jpg);
+  background-size: cover;
+}
+
+.about {
+  height: 35em;
 }
