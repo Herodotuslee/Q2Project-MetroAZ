@@ -51,30 +51,55 @@ module.exports = {
       mm = '0'+mm
   }
   today = yyyy + '-' + mm + '-' + dd;
-    knex('clock').where('clockin_date',today)
+    knex('clock').where('date',today)
     .then((result)=>{
       res.render("clockin",{result})
     })
   },
   clockIn:(req, res)=>{
-    let startTime = Date.now();
+    let nowtime = Date.now();
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth()+1; //January is 0!
+    let yyyy = today.getFullYear();
+    if(dd<10) {
+        dd = '0'+dd
+    }
+    if(mm<10) {
+        mm = '0'+mm
+    }
+    todayDate = yyyy + '-' + mm + '-' + dd;
+    console.log(todayDate)
     knex('clock').insert({
       clockout_time:null,
       employee_id:req.session.employee_id,
-      nowtime:startTime,
+      nowtime:nowtime ,
+      date:todayDate
     }).then(()=>{
       res.redirect("/clock");
     })
   },
   clockOut:(req, res)=>{
-    let endTime = Date.now();
+    let nowtime =Date.now();
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth()+1; //January is 0!
+    let yyyy = today.getFullYear();
+    if(dd<10) {
+        dd = '0'+dd
+    }
+    if(mm<10) {
+        mm = '0'+mm
+    }
+    todayDate = yyyy + '-' + mm + '-' + dd;
     knex('clock').where('id',req.params.final_id)
     .then((result_final_id)=>{
       knex('clock').insert({
         employee_id:req.session.employee_id,
         clockin_time:null,
-        nowtime:endTime,
-        workingtime:(endTime-result_final_id[0].nowtime)/1000
+        nowtime:nowtime,
+        workingtime:(today-result_final_id[0].nowtime)/3600000,
+        date:todayDate
       }).then(()=>{
         res.redirect("/clock");
       })

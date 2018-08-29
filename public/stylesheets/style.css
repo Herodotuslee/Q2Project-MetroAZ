@@ -137,6 +137,7 @@ form {
   display: inline-block;
 }
 
+<<<<<<< HEAD
 #inbox-btn {
   height: 45px;
   width: 100px;
@@ -144,6 +145,8 @@ form {
   margin-top: 5px;
   margin-bottom: 15px;
 }
+=======
+>>>>>>> 79d6ba26bf9783f42368e6198b7107ca9edace3e
 
 /* PROJECTS PAGE */
 

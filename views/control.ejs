@@ -2,7 +2,7 @@
     <p>timeLog</p>
 
 
-      <form class="" action="/timelog/" method="get">
+      <!-- <form class="" action="/timelog/" method="get">
         <select class="" name="tag">
           <%let list =[]%>
           <%result.forEach(item=>{%>
@@ -11,15 +11,26 @@
             <%}%>
           <%})%>
           <%list.forEach(name=>{%>
-            <option value=<%=name%>><%=name%></option>
+            <option value= <%= name %> name=<%= name %>><%=name%></option>
           <%})%>
         </select><br><br>
-      </form>
+      </form> -->
+      <div class="employee-box">
+        <%result.forEach((item)=>{%>
+          <h1><%=item.name%></h1><hr>
+          <h1><%=item.email%></h1><hr>
+          <p>Put a picture here</p>
+          <a href="/control/clockin/<%=item.id%>">TimeCard</a>
 
-      <h1><%=result[0].name%></h1><hr>
+        <%})%>
 
 
-    <div class="">
+      </div>
+
+
+
+
+    <!-- <div class="">
       <%for(let i=0;i< result.length;i++){%>
         <h4>Date:<%=result[i].clockin_date%></h4><br>
         <%if(result[i].clockin_time){%>
@@ -33,11 +44,11 @@
 
       <%}%>
 
-    </div>
-
+    </div> -->
+<!--
     <h2>choose the months {Jun}</h2>
     <h1>log</h1>
     <h1>Graph</h1>
-    <h1>{number} hours</h1>
+    <h1>{number} hours</h1> -->
 
 <% include ./partials/footer %>

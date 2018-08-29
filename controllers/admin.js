@@ -1,7 +1,6 @@
 const knex = require("../db/knex.js");
 
 module.exports = {
-
   adminPage: (req, res) => {
     res.render('admin')
   },
@@ -12,7 +11,7 @@ module.exports = {
         if (admin.password === req.body.password) {
           req.session.admin_id = admin.id;
           // res.send('ok')
-          res.redirect("/timelog")
+          res.redirect("/control")
         } else {
           res.redirect("/");
           // ADD~SHOW WRONG PASSWORD
@@ -27,11 +26,9 @@ module.exports = {
       res.redirect("/")
     })
   },
-
   addProjectPG: (req, res) => {
     res.render('addProject')
   },
-
   addProject: (req, res) => {
     knex('project').insert({
         name: req.body.name,
@@ -43,20 +40,20 @@ module.exports = {
         res.redirect('/projects')
       })
   },
-  timelog:(req,res)=>{
+  control:(req,res)=>{
     knex('employee')
-    .leftJoin('clock','employee.id','employee_id')
     .then((result)=>{
       // res.send(result)
-      res.render('timelog',{result})
+      res.render('control',{result})
     })
   },
-  // showTimeLog:(req,res)=>{
-  //   knex('employee').where('name','Albert')
-  //   .join('clock','employee_id',1)
-  //   .then((result)=>{
-  //     res.render('timelog',{result})
-  //   })
-  //
-  // }
+  employeeInfo:(req,res)=>{
+    knex('employee').where('id',req.params.employee_id)
+    .then((emeplyresult)=>{
+      return knex('clock').where('employee_id',req.params.employee_id)
+          .then((result)=>{
+            res.render("employeeData",{result,employeename:emeplyresult[0]})
+          })
+    })
+  }
 }

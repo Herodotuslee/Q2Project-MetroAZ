@@ -11,9 +11,9 @@ module.exports = {
   contact: function(req, res) {
     res.render("contact")
   },
-  // projects: function(req, res) {
-  //   res.render("projects")
-  // },
+  projects: function(req, res) {
+    res.render("projects")
+  },
   contactus:(req,res)=>{
     knex('inbox').insert({
       name: req.body.name,
@@ -22,7 +22,6 @@ module.exports = {
     }).then(() => {
       res.redirect("/");
     })
-
   },
   // Projects
   projects: (req, res) => {
@@ -33,4 +32,7 @@ module.exports = {
         })
       })
   },
+  test:(req,res)=>{
+    res.render("test")
+  }
 }
