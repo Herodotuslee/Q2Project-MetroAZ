@@ -24,15 +24,17 @@
  padding-top: 2%;
  text-align: center;
  height: 200px;
- font-size: 2em;
  background-color: #EDEDED;
+}
+
+.upcoming h2 {
+color: #86503D;
 }
 
 .contactUs {
  color: grey;
- height: 2em;
- width: 8em;
- border-radius: 10px;
+ height: 2.5em;
+ width: 100px;
  background-color: #FAEBD7;
  box-shadow: 2px 2px 20px grey;
 }
@@ -116,13 +118,19 @@
 
 
 /* LOGIN PAGE */
+.login-page{
+  background-image:url(https://images.unsplash.com/photo-1518572582339-a0ad3c52a27a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b1f2ee8ed0ba9535ca2cb318dcffe451&auto=format&fit=crop&w=1778&q=80);
+  background-position: center;
+  background-size:cover;
+}
+
 #login-container{
  text-align: center;
- padding-top: 1em;
+ padding-top: 2em;
 }
 
 #login-icon{
- color:black;
+ color:white;
 }
 
 #login-input{
@@ -133,12 +141,29 @@
 .loginBtn{
  height:30px;
  width:120px;
+ cursor:pointer;
+}
+
+.loginBtn:hover{
+  background-color:red;
 }
 
 #forgot{
  font-size:14px;
 }
 
+#login-header{
+  color:white;
+}
+
+.login-form{
+  background: rgba(0, 0, 0, 0.5);
+  border-color:black;
+  border-style:solid;
+  border-radius:10px;
+  height:330px;
+  width:240px;
+}
 
 /* INBOX.EJS */
 
