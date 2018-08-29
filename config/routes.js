@@ -40,7 +40,6 @@ module.exports = function(app) {
   app.post('/inbox/read/:message_id',employee.toread);
   app.post('/inbox/complete/:message_id',employee.tocomplete);
   app.get('/inbox/delete/:message_id',employee.todelete);
-  app.get('/clock',employee.clockPage);
 
 //BOSS AUTHORIZATION
   app.use(authenticateAdmin);

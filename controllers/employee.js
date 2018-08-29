@@ -1,4 +1,5 @@
 const knex = require("../db/knex.js");
+const moment = require('moment');
 
 module.exports = {
 
@@ -53,6 +54,9 @@ module.exports = {
   today = yyyy + '-' + mm + '-' + dd;
     knex('clock').where('date',today)
     .then((result)=>{
+      if(result.length){
+        result[0].date=moment(result[0].date).format("YYYY-MM-DD")
+      }
       res.render("clockin",{result})
     })
   },
@@ -69,7 +73,6 @@ module.exports = {
         mm = '0'+mm
     }
     todayDate = yyyy + '-' + mm + '-' + dd;
-    console.log(todayDate)
     knex('clock').insert({
       clockout_time:null,
       employee_id:req.session.employee_id,
