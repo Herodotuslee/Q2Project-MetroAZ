@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+<h1><%=employeename.name%> Time CARD</h1>
+<hr>
+<%result.forEach(item=>{%>
+  <h3>Date</h3>
+  <h5><%=item.clockin_date%></h5>
+  <%if(item.clockin_time){%>
+    <h3>Clock in Time :</h3>
+    <h5><%=item.clockin_time%></h5><hr>
+  <%}else{%>
+    <h3>Clock out Time :</h3>
+    <h5><%=item.clockout_time%></h5><hr>
+    <h5>Working time</h5>
+    <h5><%=item.workingtime%></h5><hr>
+  <%}%>
+<%})%>
+
+<% include ./partials/footer %>

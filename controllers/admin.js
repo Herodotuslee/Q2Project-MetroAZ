@@ -43,14 +43,26 @@ module.exports = {
         res.redirect('/projects')
       })
   },
-  timelog:(req,res)=>{
+  control:(req,res)=>{
     knex('employee')
-    .leftJoin('clock','employee.id','employee_id')
     .then((result)=>{
       // res.send(result)
-      res.render('timelog',{result})
+      res.render('control',{result})
     })
   },
+  employeeInfo:(req,res)=>{
+    knex('employee').where('id',req.params.employee_id)
+    .then((emeplyresult)=>{
+      return knex('clock').where('employee_id',req.params.employee_id)
+          .then((result)=>{
+            res.render("employeeData",{result,employeename:emeplyresult[0]})
+
+          })
+
+
+    })
+
+  }
   // showTimeLog:(req,res)=>{
   //   knex('employee').where('name','Albert')
   //   .join('clock','employee_id',1)
