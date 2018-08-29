@@ -1,5 +1,30 @@
 <% include ./partials/header %>
 
+<div class="select-form">
+<h1>SELECT</h1>
+
+<form class="" action="/control/clock/search/<%=result[0].employee_id%>" method="get">
+  <select class="" name="clock_date">
+    <%let list =[]%>
+    <%result.forEach(item=>{%>
+      <%if(!(list.includes(item.date))&& item.date!==null){%>
+        <%list.push(item.date)%>
+      <%}%>
+    <%})%>
+    <%list.forEach(date=>{%>
+      <%console.log(date)%>
+      <option value="<%=date%>"><%=date%></option>
+    <%})%>
+  </select><br><br>
+  <button type="submit" name="button">Search</button>
+
+</form>
+
+</div>
+
+
+
+
 <h1><%=employeename.name%> Time CARD</h1>
 <hr>
 <%result.forEach(item=>{%>
@@ -18,48 +43,6 @@
   <%}%>
 <%})%>
 
-<div class="container">
-  <canvas id="myChart"></canvas>
-  <canvas id="myLineChart" height='400' width='400'></canvas>
-</div>
 
-<script>
-let clockin_time = [1, 10, 5, 2, 20, 30, 45];
-let clockout_time  = [20, 30, 15, 12, 21, 30, 40];
-
-  const ctx = document.getElementById('myLineChart');
-  const myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [
-         {
-           label: "Data, baby!",
-           fill: false,
-           backgroundColor: 'rgb(190, 99, 255, 0.25)',
-           borderColor: 'rgb(190, 99, 255)',
-           data: clockin_time,
-         },
-           {
-           label: "More data, baby!",
-           fill: true,
-           backgroundColor: 'rgba(255, 99, 132, 0.25)',
-           borderColor: 'rgb(255, 99, 132)',
-           data: clockout_time,
-       }]
-      },
-      options: {
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero:true
-                  }
-              }]
-          }
-      }
-  });
-
-</script>
 
 <% include ./partials/footer %>

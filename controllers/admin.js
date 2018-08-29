@@ -57,11 +57,28 @@ module.exports = {
               result.forEach(item=>{
                 item.date=moment(item.date).format("YYYY-MM-DD")
               })
-
               res.render("employeeData",{result,employeename:emeplyresult[0]})
             }
-
           })
     })
+  },
+  searchDate:(req,res)=>{
+    console.log(req.query)
+    knex('clock').where({
+      "employee_id":req.params.employee_id,
+      'date':req.query.clock_date
+    })
+    .then((result)=>{
+      // res.send(result)
+      result.forEach(item=>{
+        item.date=moment(item.date).format("YYYY-MM-DD")
+      })
+      res.render('afterSearchData',{result})
+
+    })
+
   }
+
+
+
 }
