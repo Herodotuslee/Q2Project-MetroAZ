@@ -16,6 +16,7 @@
 
 .navbar {
   box-shadow: 0px 0px 10px grey;
+  height: 8.5vh;
 }
 
 /* Upcoming projects bottom banner */
@@ -61,8 +62,9 @@
 
 .add {
   text-align: center;
-  height: 65vh;
-  margin-top: 5%;
+  height: 75vh;
+  padding-top: 5%;
+  background-image: url("https://images.pexels.com/photos/168442/pexels-photo-168442.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 .addForm input {
@@ -70,18 +72,24 @@
   width: 28vw;
   margin-top: 5%;
   border-radius: 3px;
+  opacity: .9;
 }
 
 .addForm textarea {
   margin-top: 5%;
   width: 28vw;
   border-radius: 3px;
+  opacity: .9;
 }
 
 .formBtn {
-  font-style: italic;
+  font-size: 1.5em;
 }
 
+.header {
+  color: ghostwhite;
+  opacity: .8;
+}
 /* Contact PAGE  */
 
 .contactPage {
@@ -303,4 +311,19 @@ h5 {
 
 .experince {
   margin-top: 2%;
+}
+
+/* Controls Page */
+
+.newProjectBtn {
+  height: 4vh;
+  width: auto;
+  border-radius: 10px;
+}
+
+.newProjectBtn:hover {
+  width: 15vw;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: #9D9B97;
 }

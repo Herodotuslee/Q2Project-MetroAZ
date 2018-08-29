@@ -1,8 +1,8 @@
 <% include ./partials/header %>
-    <p>timeLog</p>
+  <p>timeLog</p>
 
 
-      <!-- <form class="" action="/timelog/" method="get">
+  <!-- <form class="" action="/timelog/" method="get">
         <select class="" name="tag">
           <%let list =[]%>
           <%result.forEach(item=>{%>
@@ -15,22 +15,32 @@
           <%})%>
         </select><br><br>
       </form> -->
-      <div class="employee-box">
-        <%result.forEach((item)=>{%>
-          <h1><%=item.name%></h1><hr>
-          <h1><%=item.email%></h1><hr>
-          <p>Put a picture here</p>
-          <a href="/control/clockin/<%=item.id%>">TimeCard</a>
 
-        <%})%>
+  <!-- Add New Project Button -->
+  
+  <a href="/projects/add">
+        <button type="button" class="newProjectBtn">
+        <i class="fa fa-plus" aria-hidden="true"></i> New Project</button>
+      </a>
+
+  <div class="employee-box">
+    <%result.forEach((item)=>{%>
+      <h1><%=item.name%></h1>
+      <hr>
+      <h1><%=item.email%></h1>
+      <hr>
+      <p>Put a picture here</p>
+      <a href="/control/clockin/<%=item.id%>">TimeCard</a>
+
+      <%})%>
 
 
-      </div>
+  </div>
 
 
 
 
-    <!-- <div class="">
+  <!-- <div class="">
       <%for(let i=0;i< result.length;i++){%>
         <h4>Date:<%=result[i].clockin_date%></h4><br>
         <%if(result[i].clockin_time){%>
@@ -45,10 +55,10 @@
       <%}%>
 
     </div> -->
-<!--
+  <!--
     <h2>choose the months {Jun}</h2>
     <h1>log</h1>
     <h1>Graph</h1>
     <h1>{number} hours</h1> -->
 
-<% include ./partials/footer %>
+  <% include ./partials/footer %>
