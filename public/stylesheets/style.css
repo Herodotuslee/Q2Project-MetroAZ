@@ -21,39 +21,24 @@
 /* Upcoming projects bottom banner */
 
 .upcoming {
-<<<<<<< HEAD
- padding-top: 2%;
- text-align: center;
- height: 200px;
- font-size: 2em;
- background-color: #EDEDED;
+  padding-top: 2%;
+  text-align: center;
+  height: 15vh;
+  background-color: #F3EEEB;
 }
 
 .contactUs {
- color: grey;
- height: 2em;
- width: 8em;
- border-radius: 10px;
- background-color: #FAEBD7;
- box-shadow: 2px 2px 20px grey;
-=======
-  margin-top: 5%;
-  padding-top: 2%;
-  text-align: center;
-  height: 18vh;
-  background-color: #EDEDED;
+  width: 6vw;
+  height: 3vh;
+  border-radius: 5px;
+  background-color: #C8752F;
+  color: #F9BB85;
+  box-shadow: 2px 2px 20px grey;
 }
 
 .upcoming h2 {
-  color: #86503D;
-}
-
-.contactUs {
-  width: vw;
-  color: grey;
-  background-color: #FAEBD7;
-  box-shadow: 2px 2px 20px grey;
->>>>>>> d1734d8f38ea70d068f83adfbac19561b04503bc
+  font-style: italic;
+  color: #480500;
 }
 
 /* Contact PAGE  */
@@ -128,7 +113,7 @@
 }
 
 #forgot {
-  font-size: 14px;
+  font-size: 20px;
 }
 
 #login-header {
@@ -154,9 +139,6 @@ form {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #inbox-btn {
   height: 45px;
   width: 100px;
@@ -164,10 +146,7 @@ form {
   margin-top: 5px;
   margin-bottom: 15px;
 }
-=======
->>>>>>> 79d6ba26bf9783f42368e6198b7107ca9edace3e
 
->>>>>>> d1734d8f38ea70d068f83adfbac19561b04503bc
 /* PROJECTS PAGE */
 
 #background-carousel {
@@ -217,13 +196,12 @@ h5 {
 }
 
 .responsive {
-    width: 70%;
-    height: auto;
+  width: 70%;
+  height: 90%;
 }
 
 .responsiveTxt {
   font-size: 1vw;
-  height: 40%;
 }
 
 .mainContainer {
@@ -231,13 +209,12 @@ h5 {
 }
 
 .headline {
-  float: inherit;
+  text-align: center;
   color: white;
   padding-top: 6%;
   font-size: 2.5vw;
   opacity: .9;
   width: 40em;
-  padding-right: 3%;
 }
 
 .parallax-window {
