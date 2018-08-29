@@ -24,17 +24,15 @@
  padding-top: 2%;
  text-align: center;
  height: 200px;
+ font-size: 2em;
  background-color: #EDEDED;
-}
-
-.upcoming h2 {
-color: #86503D;
 }
 
 .contactUs {
  color: grey;
- height: 2.5em;
- width: 100px;
+ height: 2em;
+ width: 8em;
+ border-radius: 10px;
  background-color: #FAEBD7;
  box-shadow: 2px 2px 20px grey;
 }
@@ -174,8 +172,6 @@ color: #86503D;
 form{
  display:inline-block;
 }
-
-
 
 /* PROJECTS PAGE */
 
