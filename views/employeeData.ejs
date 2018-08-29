@@ -7,12 +7,12 @@
   <h5><%=item.clockin_date%></h5>
   <%if(item.clockin_time){%>
     <h3>Clock in Time :</h3>
-    <h5><%=item.clockin_time%></h5><hr>
+    <h5><%=item.clockin_time.slice(1,5)%></h5><hr>
   <%}else{%>
     <h3>Clock out Time :</h3>
-    <h5><%=item.clockout_time%></h5><hr>
+    <h5><%=item.clockout_time.slice(1,5)%></h5><hr>
     <h5>Working time</h5>
-    <h5><%=item.workingtime%></h5><hr>
+    <h5><%=item.workingtime.toFixed(0)%>SEC</h5><hr>
   <%}%>
 <%})%>
 

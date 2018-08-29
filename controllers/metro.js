@@ -11,9 +11,9 @@ module.exports = {
   contact: function(req, res) {
     res.render("contact")
   },
-  // projects: function(req, res) {
-  //   res.render("projects")
-  // },
+  projects: function(req, res) {
+    res.render("projects")
+  },
   contactus:(req,res)=>{
     knex('inbox').insert({
       name: req.body.name,

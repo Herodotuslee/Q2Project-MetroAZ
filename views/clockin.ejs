@@ -17,16 +17,13 @@
   <h1>TIMECARD</h1>
   <%result.forEach((item)=>{%>
     <%if(item.clockin_time){%>
-        <h4>Clock in at <%=item.clockin_time%></h4><br>
+        <h4>Clock in at <%=item.clockin_time.slice(1,5)%></h4><br>
     <%}else{%>
-        <h4>Clock out at <%=item.clockout_time%></h4><br>
-        <h4>Today you worked <%=item.workingtime%> Sec</h4><br>
+        <h4>Clock out at <%=item.clockout_time.slice(1,5)%></h4><br>
+        <h4>Today you worked <%=item.workingtime.toFixed()%> Sec</h4><br>
     <%}%>
   <%})%>
 
-  <p>You still have {number} times day off</p>
-  <p>Today you work {number} hours and {number} minuts</p>
-  <p>You work {number} this month</p>
 
 </div>
 

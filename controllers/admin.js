@@ -12,7 +12,7 @@ module.exports = {
         if (admin.password === req.body.password) {
           req.session.admin_id = admin.id;
           // res.send('ok')
-          res.redirect("/timelog")
+          res.redirect("/control")
         } else {
           res.redirect("/");
           // ADD~SHOW WRONG PASSWORD
@@ -26,12 +26,10 @@ module.exports = {
     req.session.save(() => {
       res.redirect("/")
     })
-  },
-
+  },  
   addProjectPG: (req, res) => {
     res.render('addProject')
   },
-
   addProject: (req, res) => {
     knex('project').insert({
         name: req.body.name,
