@@ -60,6 +60,10 @@
 
   <!-- Footer -->
   <% include ./partials/bottomBanner %>
+  <div id="map"></div>
+  <script src="/maps/map.js" defer></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4kCsomfpNUDQH2ea9JWK-xfYoZuawXeM&callback=initMap"></script>
+
     <% include ./partials/footer %>
       <script type="text/javascript">
         var $item = $('.carousel-item');

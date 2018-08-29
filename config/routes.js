@@ -11,6 +11,11 @@ module.exports = function(app) {
   app.get('/about', metro.about);
   app.get('/projects', metro.projects);
   app.post('/contactus', metro.contactus);
+<<<<<<< HEAD
+=======
+  app.get('/leadership', metro.leadership);
+  app.get('/equipment', metro.equipment);
+>>>>>>> 24cbb1e579abc7d6ef86e60909d593ea0d98f611
 
   app.get('/test',metro.test);
 
