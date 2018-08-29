@@ -1,21 +1,22 @@
 <% include ./partials/header %>
 <!-- Header and Nav bar -->
-
+<div class="add">
 <h1>Add a Project</h1>
 
-<form class="" action="/projects/add" method="post">
+<form class="addForm" action="/projects/add" method="post">
 
-  <input type="text" name="name" placeholder="Name">
+  <input type="text" name="name" placeholder="Project Name">
   <br>
   <input type="text" name="address" placeholder="Address">
   <br>
-  <input type="text" name="description" placeholder="Description">
+  <textarea name="description" rows="8" cols="80" placeholder="Description"></textarea>
   <br>
   <input type="text" name="img_url" placeholder="Image URL">
   <br>
-  <input type="submit">
+  <input class="formBtn" type="submit">
 
 </form>
+</div>
 
 <!-- Footer -->
 <% include ./partials/footer %>

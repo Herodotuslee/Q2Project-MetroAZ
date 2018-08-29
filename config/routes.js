@@ -10,6 +10,7 @@ module.exports = function(app) {
   app.get('/about', metro.about);
   app.get('/projects', metro.projects);
   app.post('/contactus', metro.contactus);
+  app.get('/leadership', metro.leadership);
 
   app.get('/test',metro.test);
 
@@ -47,6 +48,7 @@ module.exports = function(app) {
 
   app.get('/projects/add', admin.addProjectPG);
   app.post('/projects/add', admin.addProject);
+  app.get('/projects/del/:id', admin.delProject);
   app.get('/control',admin.control);
   app.get('/control/clockin/:employee_id',admin.employeeInfo)
 }

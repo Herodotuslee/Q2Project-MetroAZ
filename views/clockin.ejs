@@ -3,6 +3,11 @@
 <% include ./partials/topBanner %>
 <div class="">
 
+  <%if(!(result.length)){%>
+    <form class="" action="clock/in" method="post">
+    <button class='btn' type="submit" name="button">Clock In</button>
+  </form>
+<%}else{%>
   <%if(result[result.length-1].clockin_time){%>
     <form class="" action="clock/out/<%=result[result.length-1].id%>" method="post">
       <button  class='btn' type="submit" name="button">Clock Out</button>
@@ -12,7 +17,11 @@
       <button class='btn' type="submit" name="button">Clock In</button>
     </form>
   <%}%>
+<%}%>
 
+
+<%if((result)==false){%>
+<%}else{%>
   <h1>TODAY IS : <%=result[0].date%></h1>
   <h1>TIMECARD</h1>
   <%result.forEach((item)=>{%>
@@ -23,6 +32,7 @@
         <h4>Today you worked <%=item.workingtime%> Hours</h4><br>
     <%}%>
   <%})%>
+<%}%>
 
 
 </div>

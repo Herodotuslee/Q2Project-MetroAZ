@@ -40,6 +40,14 @@ module.exports = {
         res.redirect('/projects')
       })
   },
+  delProject: (req, res) => {
+    knex("project")
+      .del()
+      .where('id', req.params.id)
+      .then(() => {
+        res.redirect("/projects")
+      })
+  },
   control:(req,res)=>{
     knex('employee')
     .then((result)=>{

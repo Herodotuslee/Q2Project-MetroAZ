@@ -15,7 +15,7 @@ exports.seed = function(knex, Promise) {
         {employee_id: 1,clockin_time:"8:00",clockout_time:null,workingtime:10,nowtime:Date.now(),date:'2018-7-23'},
         {employee_id: 1,clockin_time:"8:00",clockout_time:null,workingtime:10,nowtime:Date.now(),date:'2018-7-24'},
         {employee_id: 2,clockout_time:"16:00",clockin_time:null,workingtime:10,nowtime:Date.now(),date:'2018-7-24'},
-        {employee_id: 1,clockin_time:"5:00",clockout_time:null,nowtime:Date.now()},
+        // {employee_id: 1,clockin_time:"5:00",clockout_time:null,nowtime:Date.now()},
 
       ]);
     });
