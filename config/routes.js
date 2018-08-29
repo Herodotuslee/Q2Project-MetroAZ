@@ -52,7 +52,9 @@ module.exports = function(app) {
   app.post('/admin', admin.login);
   app.get('/projects/add', admin.addProjectPG);
   app.post('/projects/add', admin.addProject);
-  app.get('/timelog',admin.timelog);
+  app.get('/control',admin.control);
+  app.get('/control/clockin/:employee_id',admin.employeeInfo)
+  // app.get('/timelog/data',admin.showTimeLog)
 }
 
 
