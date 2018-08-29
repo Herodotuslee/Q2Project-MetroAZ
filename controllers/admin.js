@@ -1,4 +1,5 @@
 const knex = require("../db/knex.js");
+const moment = require('moment');
 
 module.exports = {
   adminPage: (req, res) => {
@@ -52,7 +53,14 @@ module.exports = {
     .then((emeplyresult)=>{
       return knex('clock').where('employee_id',req.params.employee_id)
           .then((result)=>{
-            res.render("employeeData",{result,employeename:emeplyresult[0]})
+            if(result.length){
+              result.forEach(item=>{
+                item.date=moment(item.date).format("YYYY-MM-DD")
+              })
+
+              res.render("employeeData",{result,employeename:emeplyresult[0]})
+            }
+
           })
     })
   }

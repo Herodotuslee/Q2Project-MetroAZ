@@ -22,7 +22,7 @@
 
 <%if((result)==false){%>
 <%}else{%>
-  <h1>TODAY IS : <%=result[0].date%></h1>
+  <h1>TODAY IS <%=result[0].date%></h1>
   <h1>TIMECARD</h1>
   <%result.forEach((item)=>{%>
     <%if(item.clockin_time){%>
