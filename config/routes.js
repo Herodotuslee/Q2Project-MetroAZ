@@ -11,6 +11,7 @@ module.exports = function(app) {
   app.get('/projects', metro.projects);
   app.post('/contactus', metro.contactus);
   app.get('/leadership', metro.leadership);
+  app.get('/equipment', metro.equipment);
 
   app.get('/test',metro.test);
 

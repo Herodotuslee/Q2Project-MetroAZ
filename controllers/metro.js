@@ -17,6 +17,9 @@ module.exports = {
   leadership: function(req, res) {
     res.render("leadership")
   },
+  equipment: function(req, res) {
+    res.render("equipment")
+  },
   contactus:(req,res)=>{
     knex('inbox').insert({
       name: req.body.name,
