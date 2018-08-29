@@ -1,7 +1,6 @@
 const knex = require("../db/knex.js");
 
 module.exports = {
-
   adminPage: (req, res) => {
     res.render('admin')
   },
@@ -26,7 +25,7 @@ module.exports = {
     req.session.save(() => {
       res.redirect("/")
     })
-  },  
+  },
   addProjectPG: (req, res) => {
     res.render('addProject')
   },
@@ -54,19 +53,7 @@ module.exports = {
       return knex('clock').where('employee_id',req.params.employee_id)
           .then((result)=>{
             res.render("employeeData",{result,employeename:emeplyresult[0]})
-
           })
-
-
     })
-
   }
-  // showTimeLog:(req,res)=>{
-  //   knex('employee').where('name','Albert')
-  //   .join('clock','employee_id',1)
-  //   .then((result)=>{
-  //     res.render('timelog',{result})
-  //   })
-  //
-  // }
 }

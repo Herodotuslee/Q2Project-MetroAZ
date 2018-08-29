@@ -1,8 +1,14 @@
 <% include ./partials/header %>
 
+<h1>Select</h1>
+H1
+
 <h1><%=employeename.name%> Time CARD</h1>
 <hr>
 <%result.forEach(item=>{%>
+  <h1>Select</h1>
+  <h1><%=item.clockin_date%></h1>
+
   <h3>Date</h3>
   <h5><%=item.clockin_date%></h5>
   <%if(item.clockin_time){%>
@@ -12,8 +18,52 @@
     <h3>Clock out Time :</h3>
     <h5><%=item.clockout_time.slice(1,5)%></h5><hr>
     <h5>Working time</h5>
-    <h5><%=item.workingtime.toFixed(0)%>SEC</h5><hr>
+    <h5><%=item.workingtime%> Hours</h5><hr>
   <%}%>
 <%})%>
+
+<div class="container">
+  <canvas id="myChart"></canvas>
+  <canvas id="myLineChart" height='400' width='400'></canvas>
+</div>
+
+<script>
+let clockin_time = [1, 10, 5, 2, 20, 30, 45];
+let clockout_time  = [20, 30, 15, 12, 21, 30, 40];
+
+  const ctx = document.getElementById('myLineChart');
+  const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [
+         {
+           label: "Data, baby!",
+           fill: false,
+           backgroundColor: 'rgb(190, 99, 255, 0.25)',
+           borderColor: 'rgb(190, 99, 255)',
+           data: clockin_time,
+         },
+           {
+           label: "More data, baby!",
+           fill: true,
+           backgroundColor: 'rgba(255, 99, 132, 0.25)',
+           borderColor: 'rgb(255, 99, 132)',
+           data: clockout_time,
+       }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero:true
+                  }
+              }]
+          }
+      }
+  });
+
+</script>
 
 <% include ./partials/footer %>

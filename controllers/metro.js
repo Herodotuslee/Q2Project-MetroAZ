@@ -22,7 +22,6 @@ module.exports = {
     }).then(() => {
       res.redirect("/");
     })
-
   },
   // Projects
   projects: (req, res) => {
@@ -33,4 +32,7 @@ module.exports = {
         })
       })
   },
+  test:(req,res)=>{
+    res.render("test")
+  }
 }

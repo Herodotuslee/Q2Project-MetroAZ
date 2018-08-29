@@ -11,13 +11,15 @@ module.exports = function(app) {
   app.get('/projects', metro.projects);
   app.post('/contactus', metro.contactus);
 
+  app.get('/test',metro.test);
+
 
 //LOGIN AND LOGOUT
   app.post('/register', employee.register);
   app.post('/login', employee.login);
   app.post('/admin', admin.login);
   app.get('/logout', admin.logout);
-  app.get('/admin', admin.adminPage);
+  // app.get('/admin', admin.adminPage);
   app.get('/contact', metro.contact);
   // app.get('/project',metro.project);
 
@@ -40,31 +42,21 @@ module.exports = function(app) {
   app.get('/inbox/delete/:message_id',employee.todelete);
   app.get('/clock',employee.clockPage);
 
-
-  app.post('/admin',admin.login);
-  app.get('/inbox',employee.inbox);    app.post('/inbox/:message_id',employee.toread);
-
 //BOSS AUTHORIZATION
   app.use(authenticateAdmin);
 
-
-  app.post('/admin', admin.login);
   app.get('/projects/add', admin.addProjectPG);
   app.post('/projects/add', admin.addProject);
   app.get('/control',admin.control);
   app.get('/control/clockin/:employee_id',admin.employeeInfo)
-  // app.get('/contro/employee',admin.emp)
-  // app.get('/timelog/data',admin.showTimeLog)
 }
 
 
 
 function authenticateEmployee(req, res, next) {
   if (!req.session.employee_id && !req.session.admin_id) {
-    // res.send('not ok')
     res.redirect('/login')
   } else {
-    // res.send('ok')
     next();
   }
 }
