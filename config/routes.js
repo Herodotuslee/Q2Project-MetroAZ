@@ -3,6 +3,7 @@ const employee = require("../controllers/employee.js");
 const metro = require("../controllers/metro.js");
 const admin = require("../controllers/admin.js")
 module.exports = function(app) {
+  app.use(addisEmployee);
 
 // FOR EVERYONE CAN SEE
   app.get('/', metro.index);
@@ -10,7 +11,6 @@ module.exports = function(app) {
   app.get('/about', metro.about);
   app.get('/projects', metro.projects);
   app.post('/contactus', metro.contactus);
-  app.get('/leadership', metro.leadership);
 
   app.get('/test',metro.test);
 
@@ -41,17 +41,15 @@ module.exports = function(app) {
   app.post('/inbox/read/:message_id',employee.toread);
   app.post('/inbox/complete/:message_id',employee.tocomplete);
   app.get('/inbox/delete/:message_id',employee.todelete);
-  app.get('/clock',employee.clockPage);
 
 //BOSS AUTHORIZATION
   app.use(authenticateAdmin);
 
   app.get('/projects/add', admin.addProjectPG);
   app.post('/projects/add', admin.addProject);
-  app.get('/projects/del/:id', admin.delProject);
   app.get('/control',admin.control);
   app.get('/control/clockin/:employee_id',admin.employeeInfo);
-  app.get('/control/clock/search/:employee_id',admin.searchDate)
+  app.get('/control/clock/search/:employee_id',admin.searchDate);
 }
 
 
@@ -63,6 +61,15 @@ function authenticateEmployee(req, res, next) {
     next();
   }
 }
+function addisEmployee(req,res,next){
+  res.locals ={
+    isemployee:(req.session.employee_id),
+    isBoss:(!!req.session.admin_id),
+  }
+  next();
+}
+
+
 
 function authenticateAdmin(req, res, next) {
   if (!(req.session.admin_id)) {
