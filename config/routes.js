@@ -50,7 +50,8 @@ module.exports = function(app) {
   app.post('/projects/add', admin.addProject);
   app.get('/projects/del/:id', admin.delProject);
   app.get('/control',admin.control);
-  app.get('/control/clockin/:employee_id',admin.employeeInfo)
+  app.get('/control/clockin/:employee_id',admin.employeeInfo);
+  app.get('/control/clock/search/:employee_id',admin.searchDate)
 }
 
 
