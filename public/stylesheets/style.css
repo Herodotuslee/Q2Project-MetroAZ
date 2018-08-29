@@ -338,5 +338,14 @@ h5 {
 
 /* Equipment Page */
 .profileContainer {
-  
+
+}
+
+.employee-box{
+  margin:2vw;
+  border-width: 1px;
+  border-color:#9D9B97;
+  border-style:solid;
+
+
 }
