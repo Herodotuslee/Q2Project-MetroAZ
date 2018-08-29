@@ -41,9 +41,8 @@ module.exports = function(app) {
   app.get('/clock',employee.clockPage);
 
 
-    app.post('/admin',admin.login);
-    app.get('/inbox',employee.inbox);
-    app.post('/inbox/:message_id',employee.toread);
+  app.post('/admin',admin.login);
+  app.get('/inbox',employee.inbox);    app.post('/inbox/:message_id',employee.toread);
 
 //BOSS AUTHORIZATION
   app.use(authenticateAdmin);
@@ -54,6 +53,7 @@ module.exports = function(app) {
   app.post('/projects/add', admin.addProject);
   app.get('/control',admin.control);
   app.get('/control/clockin/:employee_id',admin.employeeInfo)
+  // app.get('/contro/employee',admin.emp)
   // app.get('/timelog/data',admin.showTimeLog)
 }
 
