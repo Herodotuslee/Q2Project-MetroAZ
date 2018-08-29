@@ -10,6 +10,7 @@ module.exports = function(app) {
   app.get('/about', metro.about);
   app.get('/projects', metro.projects);
   app.post('/contactus', metro.contactus);
+  app.get('/leadership', metro.leadership);
 
   app.get('/test',metro.test);
 
@@ -40,12 +41,14 @@ module.exports = function(app) {
   app.post('/inbox/read/:message_id',employee.toread);
   app.post('/inbox/complete/:message_id',employee.tocomplete);
   app.get('/inbox/delete/:message_id',employee.todelete);
+  app.get('/clock',employee.clockPage);
 
 //BOSS AUTHORIZATION
   app.use(authenticateAdmin);
 
   app.get('/projects/add', admin.addProjectPG);
   app.post('/projects/add', admin.addProject);
+  app.get('/projects/del/:id', admin.delProject);
   app.get('/control',admin.control);
   app.get('/control/clockin/:employee_id',admin.employeeInfo);
   app.get('/control/clock/search/:employee_id',admin.searchDate)

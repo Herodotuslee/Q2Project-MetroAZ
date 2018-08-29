@@ -41,6 +41,47 @@
   color: #480500;
 }
 
+.deleteBtn {
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Add projects page */
+
+.caption {
+  background-color: white;
+  opacity: .8;
+  border-radius: 5px;
+}
+
+.description {
+  color: #2e242c;
+}
+
+.add {
+  text-align: center;
+  height: 65vh;
+  margin-top: 5%;
+}
+
+.addForm input {
+  height: 5vh;
+  width: 28vw;
+  margin-top: 5%;
+  border-radius: 3px;
+}
+
+.addForm textarea {
+  margin-top: 5%;
+  width: 28vw;
+  border-radius: 3px;
+}
+
+.formBtn {
+  font-style: italic;
+}
+
 /* Contact PAGE  */
 
 .contactPage {
@@ -217,17 +258,16 @@ h5 {
   width: 40em;
 }
 
-.parallax-window {
+.parallax {
+  /* The image used */
+  background-image: url(/images/cropped_road.jpg);
   height: 30vh;
-  background: transparent;
-  box-shadow: 2px 2px 20px grey;
-}
-
-.banner {
-  background-color: pink;
-  height: 25em;
-  background-image: url(/images/road.jpg);
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 2px 2px 20px grey;
 }
 
 .mainList {
@@ -243,4 +283,24 @@ h5 {
   font-style: 1vw;
   margin-top: 3%;
   margin-bottom: 3%;
+}
+
+/* Leadership Page */
+.profileContainer {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.profileRows {
+  margin-top: 5%;;
+}
+.profile {
+  height: 30vh;
+  width: auto;
+  border-radius: 3px;
+  box-shadow: 2px 2px 30px grey;
+}
+
+.experince {
+  margin-top: 2%;
 }
