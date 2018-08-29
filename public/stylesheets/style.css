@@ -7,39 +7,40 @@
 /* Header */
 
 .metroLogo {
- height: 60px;
+  height: 60px;
 }
 
 .topNav {
- box-shadow: 2px 2px 30px grey;
+  box-shadow: 2px 2px 30px grey;
 }
 
 .navbar {
- box-shadow: 2px 2px 10px grey;
+  box-shadow: 0px 0px 10px grey;
 }
 
 /* Upcoming projects bottom banner */
 
 .upcoming {
- padding-top: 2%;
- text-align: center;
- height: 200px;
- background-color: #EDEDED;
+  margin-top: 5%;
+  padding-top: 2%;
+  text-align: center;
+  height: 18vh;
+  background-color: #EDEDED;
 }
 
 .upcoming h2 {
-color: #86503D;
+  color: #86503D;
 }
 
 .contactUs {
- color: grey;
- height: 2.5em;
- width: 100px;
- background-color: #FAEBD7;
- box-shadow: 2px 2px 20px grey;
+  width: vw;
+  color: grey;
+  background-color: #FAEBD7;
+  box-shadow: 2px 2px 20px grey;
 }
 
 /* Contact PAGE  */
+
 .contactPage {
   margin-top: 2%;
   margin-bottom: 1%;
@@ -63,48 +64,13 @@ color: #86503D;
 }
 
 /* Inbox page  */
-.gridContainer {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-row-gap: 20px;
-  padding-left: 5%;
-  margin-right: 5%;
-  padding-bottom: 3%;
-}
-
-.gridContainer2 {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-row-gap: 20px;
-  padding-left: 15%;
-  padding-bottom: 3%;
-}
-
-.gridContainer1 {
-  display: grid;
-  grid-template-columns: auto;
-  grid-row-gap: 20px;
-  padding-left: 35%;
-  padding-bottom: 3%;
-}
-
-.gridItem {
-  padding: 20px;
-  font-size: 15px;
-  text-align: center;
-  background-color: white;
-  opacity: 0.97;
-  width: 420px;
-  border-radius: 7px;
-}
 
 .inbox {
   border: 1px solid grey;
-  padding: 20px;
+  padding: 25px;
   font-size: 15px;
   text-align: center;
-  background-color: white;
-  opacity: 0.97;
+  background-color;
 }
 
 .inboxBtns {
@@ -116,161 +82,165 @@ color: #86503D;
   background-color: grey;
 }
 
-
 /* LOGIN PAGE */
-.login-page{
-  background-image:url(https://images.unsplash.com/photo-1518572582339-a0ad3c52a27a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b1f2ee8ed0ba9535ca2cb318dcffe451&auto=format&fit=crop&w=1778&q=80);
+
+.login-page {
+  background-image: url(https://images.unsplash.com/photo-1518572582339-a0ad3c52a27a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b1f2ee8ed0ba9535ca2cb318dcffe451&auto=format&fit=crop&w=1778&q=80);
   background-position: center;
-  background-size:cover;
+  background-size: cover;
 }
 
-#login-container{
- text-align: center;
- padding-top: 2em;
+#login-icon {
+  color: white;
 }
 
-#login-icon{
- color:white;
+#login-input {
+  font-size: 14px;
+  text-align: center;
 }
 
-#login-input{
- font-size:14px;
- text-align: center;
+.loginBtn {
+  height: 30px;
+  width: 120px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.loginBtn{
- height:30px;
- width:120px;
- cursor:pointer;
+.loginBtn:hover {
+  background-color: grey;
 }
 
-.loginBtn:hover{
-  background-color:red;
+#forgot {
+  font-size: 14px;
 }
 
-#forgot{
- font-size:14px;
+#login-header {
+  color: white;
 }
 
-#login-header{
-  color:white;
-}
-
-.login-form{
+.login-form {
   background: rgba(0, 0, 0, 0.5);
-  border-color:black;
-  border-style:solid;
-  border-radius:10px;
-  height:330px;
-  width:240px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  height: 330px;
+  width: 240px;
 }
 
 /* INBOX.EJS */
 
-#inbox-container{
- text-align:center;
+#inbox-container {
+  text-align: center;
 }
 
-form{
- display:inline-block;
+form {
+  display: inline-block;
 }
 
-#inbox-btn{
- height:45px;
- width:100px;
- border-radius:5px;
- margin-top:5px;
- margin-bottom:15px;
+#inbox-btn {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
-
 
 /* PROJECTS PAGE */
 
- #background-carousel{
-     position:fixed;
-     width:100%;
-     height:100%;
-     z-index:-1;
- }
- .carousel,
- .carousel-inner {
-     width:100%;
-     height:100%;
-     z-index:0;
-     overflow:hidden;
- }
+#background-carousel {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
- .item {
-     width:100%;
-     height:80%;
-     background-position:center center;
-     background-size:cover;
-     z-index:0;
- }
+.carousel, .carousel-inner {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
 
- h5 {
- display: inline-block;
- padding: 10px;
- border-top-left-radius: 10px;
- border-top-right-radius: 10px;
+.item {
+  width: 100%;
+  height: 80%;
+  background-position: center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+h5 {
+  display: inline-block;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .full-screen {
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.index-btn-box{
- display:inline-block;
+.index-btn-box {
+  display: inline-block;
 }
 
 /* Main page */
+
 .indexIMG {
- height: 375px;
- width: 375px;
- border-radius: 50%;
- box-shadow: 100px;
- box-shadow: 2px 2px 20px grey;
+  border-radius: 50%;
+  box-shadow: 2px 2px 20px grey;
+}
+
+.responsive {
+    width: 70%;
+    height: auto;
+}
+
+.responsiveTxt {
+  font-size: 1vw;
+  height: 40%;
 }
 
 .mainContainer {
- text-align: center;
+  text-align: center;
 }
 
 .headline {
- float: inherit;
- color: white;
- padding-top: 10%;
- font-size: 50px;
- opacity: .9;
- width: 40em;
- padding-right: 3%;
+  float: inherit;
+  color: white;
+  padding-top: 6%;
+  font-size: 2.5vw;
+  opacity: .9;
+  width: 40em;
+  padding-right: 3%;
 }
 
 .parallax-window {
-   min-height: 400px;
-   background: transparent;
-   box-shadow: 2px 2px 20px grey;
-
+  height: 30vh;
+  background: transparent;
+  box-shadow: 2px 2px 20px grey;
 }
+
 .banner {
- background-color: pink;
- height: 25em;
- background-image: url(/images/road.jpg);
- background-size: cover;
+  background-color: pink;
+  height: 25em;
+  background-image: url(/images/road.jpg);
+  background-size: cover;
 }
 
 .mainList {
- font-size: 1em;
+  font-size: 1vw;
 }
 
 .arrow {
-height: 100px;
+  height: 100px;
 }
 
 .about {
- height: 27em;
- margin-top: 1%;
- margin-bottom: 1%;
+  height: 27em;
+  font-style: 1vw;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
