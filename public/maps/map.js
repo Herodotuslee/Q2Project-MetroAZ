@@ -16,3 +16,4 @@ function initMap() {
     icon:officeimg
   });
 }
+initMap();

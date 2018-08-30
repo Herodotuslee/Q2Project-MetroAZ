@@ -282,6 +282,14 @@ h5 {
   display: inline-block;
 }
 
+#currentandrecent{
+  text-align:center;
+  padding-top:10px;
+  padding-bottom:10px;
+  background-color: white;
+  margin-top:5px;
+}
+
 /* Main page */
 
 .indexIMG {
