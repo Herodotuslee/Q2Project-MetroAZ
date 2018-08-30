@@ -437,7 +437,14 @@ h5 {
     margin:3vh auto;
 }
 
+.project-box-btn{
+  /* margin:0px auto; */
+  text-align: center;
+}
 
+.control-btn{
+  width:10vw;
+}
 #clock {
    text-align: center;
    margin-top: 1vh;

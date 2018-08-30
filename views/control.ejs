@@ -3,22 +3,23 @@
 
 
 <div class=" controlCont container">
-  <div class="row">
-    <div class="">
-      <a href="/projects/add">
-            <button type="button" class="newProjectBtn">
-            <i class="fa fa-plus" aria-hidden="true"></i> New Project</button>
-      </a>
+  <div class="project-box-btn">
+    <a href="/projects/add">
+          <button type="button" class="btn btn-success">
+          <i class="fa fa-plus" aria-hidden="true"></i> New Project</button>
+    </a>
 
-    </div>
+  </div>
+  <div class="row">
+
     <%result.forEach((item)=>{%>
-      <div class="employee-box col-3">
+      <div class="employee-box col-md-3">
         <h1><%=item.name%></h1>
         <hr>
         <p>Email:<%=item.email%></p>
         <hr>
         <p>Put a picture here</p>
-        <a class='btn btn-outline-secondary control-btn' href="/control/logtime/<%=item.id%>">TimeCard</a>
+        <a class='btn btn-info'  href="/control/logtime/<%=item.id%>">TimeCard</a>
 
 
       </div>
