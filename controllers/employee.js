@@ -101,7 +101,7 @@ module.exports = {
         employee_id:req.session.employee_id,
         clockin_time:null,
         nowtime:nowtime,
-        workingtime:(today-result_final_id[0].nowtime)/3600000,
+        workingtime:((today-result_final_id[0].nowtime)/3600000).toFixed(1),
         date:todayDate
       }).then(()=>{
         res.redirect("/clock");

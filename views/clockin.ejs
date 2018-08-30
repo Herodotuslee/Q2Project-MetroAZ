@@ -1,38 +1,47 @@
 
 <% include ./partials/header %>
 <% include ./partials/topBanner %>
-<div class="">
-
-  <%if(!(result.length)){%>
-    <form class="" action="clock/in" method="post">
-    <button class='btn' type="submit" name="button">Clock In</button>
-  </form>
-<%}else{%>
-  <%if(result[result.length-1].clockin_time){%>
-    <form class="" action="clock/out/<%=result[result.length-1].id%>" method="post">
-      <button  class='btn' type="submit" name="button">Clock Out</button>
-    </form>
-  <%}else{%>
-    <form class="" action="clock/in" method="post">
+<div class="clock-in-box">
+  <div class="checkin-box">
+    <%if(!(result.length)){%>
+      <form class="" action="clock/in" method="post">
       <button class='btn' type="submit" name="button">Clock In</button>
     </form>
-  <%}%>
-<%}%>
-
-
-<%if((result)==false){%>
-<%}else{%>
-  <h1>TODAY IS <%=result[0].date%></h1>
-  <h1>TIMECARD</h1>
-  <%result.forEach((item)=>{%>
-    <%if(item.clockin_time){%>
-        <h4>Clock in at <%=item.clockin_time.slice(1,5)%></h4><br>
+  <%}else{%>
+    <%if(result[result.length-1].clockin_time){%>
+      <form class="" action="clock/out/<%=result[result.length-1].id%>" method="post">
+        <button  class='btn btn-danger' type="submit" name="button">Clock Out</button>
+      </form>
     <%}else{%>
-        <h4>Clock out at <%=item.clockout_time.slice(1,5)%></h4><br>
-        <h4>Today you worked <%=item.workingtime%> Hours</h4><br>
+      <form class="" action="clock/in" method="post">
+        <button class='btn btn-success' type="submit" name="button">Clock In</button>
+      </form>
     <%}%>
-  <%})%>
-<%}%>
+  <%}%>
+
+  </div>
+
+  <div class="log-box">
+
+
+    <%if((result)==false){%>
+    <%}else{%>
+      <h1>TODAY IS <%=result[0].date%></h1>
+      <%result.forEach((item)=>{%>
+        <%if(item.clockin_time){%>
+            <h4>Clock in at <%=item.clockin_time.slice(0,5)%></h4><br>
+        <%}else{%>
+            <h4>Clock out at <%=item.clockout_time.slice(0,5)%></h4><br>
+            <h4>Today you worked <%=item.workingtime%> Hours</h4><br>
+            <h4>You got $<%=item.workingtime*15%> Today</h4>
+        <%}%>
+      <%})%>
+    <%}%>
+
+
+  </div>
+
+
 
 
 </div>
