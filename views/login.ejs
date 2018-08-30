@@ -1,8 +1,9 @@
 <% include ./partials/header %>
 
   <div class="container-fluid login-page">
-
     <div class="login-box">
+
+<!--EMPLOYEE LOGIN -->
       <div class="employee-login-box">
         <h3 id="login-header">Employee Login</h3>
         <form class="login-form" action="login" method="post">
@@ -18,9 +19,8 @@
           <span class="psw" id="forgot"><b><a href="#">Forgot password?</a></b></span><br><br>
         </form>
         <br>
-
       </div>
-
+<!-- ADMIN LOGIN -->
       <div class="admin-login-box">
         <h3 id="login-header">Admin Login</h3>
         <form class="login-form" action="admin" method="post">
@@ -33,6 +33,8 @@
           <span class="psw" id="forgot"><a href="#">Forgot password?</a></span><br><br>
         </form>
       </div>
+
     </div>
   </div>
+  
 <% include ./partials/footer %>

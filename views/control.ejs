@@ -1,15 +1,16 @@
 <% include ./partials/header %>
-  <p>timeLog</p>
-
   <!-- Add New Project Button -->
 
-  <a href="/projects/add">
-        <button type="button" class="newProjectBtn">
-        <i class="fa fa-plus" aria-hidden="true"></i> New Project</button>
-      </a>
 
 <div class="container">
   <div class="row">
+    <div class="">
+      <a href="/projects/add">
+            <button type="button" class="newProjectBtn">
+            <i class="fa fa-plus" aria-hidden="true"></i> New Project</button>
+      </a>
+
+    </div>
     <%result.forEach((item)=>{%>
       <div class="employee-box col-3">
         <h1><%=item.name%></h1>

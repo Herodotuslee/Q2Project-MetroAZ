@@ -6,8 +6,22 @@
 
 /* Header */
 
+
+html,
+body {
+    /* background-color: #fff; */
+    /* color: #555; */
+    font-family: 'Lato', 'Arial', sans-serif;
+    /* font-weight: 300;
+    font-size: 20px; */
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+
 .metroLogo {
   height: 4vh;
+  margin-right: 2em;
 }
 
 .topNav {
@@ -299,8 +313,11 @@ h5 {
 
 .parallax {
   /* The image used */
+  /* background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/cropped_road.jpg); */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(/images/cropped_road.jpg); */
   background-image: url(/images/cropped_road.jpg);
   height: 30vh;
+  opacity:
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -420,20 +437,51 @@ h5 {
   bottom:0;
 }
 
-.navbar.navbar-2 .navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+
+.logo-text{
+   display:inline-block;
 }
+
+.logo-text-after{
+   display:none;
+}
+/* .navbar.navbar-2 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+} */
 @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;
     }
     .metroLogo {
-      height: 2vh;
+      height: 2em;
+      margin-right:2em;
       /* font-size: 2vh; */
     }
     .logo-text{
+       display:none;
+    }
+
+    .logo-text-after{
+       display:inline-block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: red;
+    }
+    .metroLogo {
+      height: 1.5em;
+      margin-right:2em;
+      /* font-size: 2vh; */
+    }
+    .logo-text{
+      visibility: hidden;;
+
+    }
+    /* .logo-text:after{
       font-size:2vh;
       content:'METRO';
 
-    }
+    } */
 }
