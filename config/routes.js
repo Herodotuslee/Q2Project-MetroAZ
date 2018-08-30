@@ -13,8 +13,8 @@ module.exports = function(app) {
   app.post('/contactus', metro.contactus);
   app.get('/leadership', metro.leadership);
   app.get('/equipment', metro.equipment);
-
-  app.get('/test',metro.test);
+  //
+  // app.get('/test',metro.test);
 
 
 //LOGIN AND LOGOUT
@@ -22,7 +22,6 @@ module.exports = function(app) {
   app.post('/login', employee.login);
   app.post('/admin', admin.login);
   app.get('/logout', admin.logout);
-  // app.get('/admin', admin.adminPage);
   app.get('/contact', metro.contact);
   // app.get('/project',metro.project);
 
@@ -50,8 +49,9 @@ module.exports = function(app) {
   app.get('/projects/add', admin.addProjectPG);
   app.post('/projects/add', admin.addProject);
   app.get('/control',admin.control);
-  app.get('/control/clockin/:employee_id',admin.employeeInfo);
-  app.get('/control/clock/search/:employee_id',admin.searchDate);
+  app.get('/control/logtime/:employee_id',admin.timeLog);
+  // app.get('/control/clock/search/:employee_id',admin.test);
+  // app.get('/test/:employee_id',admin.test);
 }
 
 
@@ -70,7 +70,6 @@ function addisEmployee(req,res,next){
   }
   next();
 }
-
 
 
 function authenticateAdmin(req, res, next) {
