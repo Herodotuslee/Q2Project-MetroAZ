@@ -40,8 +40,8 @@
 }
 
 .contactUs {
-  width: 6vw;
-  height: 3vh;
+  width: 7vw;
+  height: 4vh;
   border-radius: 5px;
   background-color: #C8752F;
   color: ghostwhite;
@@ -51,7 +51,7 @@
 
 .contactUs:hover {
   width: 8vw;
-  height: 4vh;
+  height: 5vh;
   border-radius: 5px;
   background-color: #C8752F;
   color: ghostwhite;

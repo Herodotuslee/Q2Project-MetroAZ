@@ -5,6 +5,7 @@ module.exports = {
   adminPage: (req, res) => {
     res.render('admin')
   },
+
   login: (req, res) => {
     knex('admin').where("email", req.body.email)
       .then((result) => {
@@ -19,6 +20,7 @@ module.exports = {
         }
       })
   },
+  
   logout: (req, res) => {
     // res.send('ok')
     req.session.admin_id = null;
