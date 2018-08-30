@@ -58,7 +58,11 @@ module.exports = {
     knex('clock').where('date',today)
     .then((result)=>{
       if(result.length){
-        result[0].date=moment(result[0].date).format("YYYY-MM-DD")
+        result.forEach(item=>{
+          item.date=moment(result[0].date).format("YYYY-MM-DD")
+
+        })
+
       }
       res.render("clockin",{result})
     })
