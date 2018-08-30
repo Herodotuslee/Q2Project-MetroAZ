@@ -44,7 +44,7 @@ body {
 
 .navbar {
   box-shadow: 0px 0px 10px grey;
-  height: 8.5vh;
+  height: 10vh;
 }
 
 /* google maps */
@@ -59,7 +59,7 @@ body {
 .upcoming {
   padding-top: 2%;
   text-align: center;
-  height: 15vh;
+  height: 17vh;
   background-color: #efefef;
 }
 
@@ -167,6 +167,7 @@ body {
 .contactForm  {
   width: 80px;
   border-radius: 5px;
+  text-align: center;
 }
 
 /* Inbox page  */
@@ -289,6 +290,14 @@ h5 {
   display: inline-block;
 }
 
+#currentandrecent{
+  text-align:center;
+  padding-top:10px;
+  padding-bottom:10px;
+  background-color: white;
+  margin-top:5px;
+}
+
 /* Main page */
 
 .indexIMG {
@@ -373,7 +382,11 @@ h5 {
 /* Controls Page */
 
 .controlCont {
+<<<<<<< HEAD
+  margin-bottom: 7%;
+=======
   margin-top: 5%;
+>>>>>>> f8c1e210abcdb1fafb4cbba7e46c80206ddcba5e
 }
 
 .newProjectBtn {
@@ -456,11 +469,6 @@ h5 {
   text-align: center;
 }
 
-.footer{
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  bottom:0;
-}
 
 .employee-box{
   margin:3em;
@@ -521,6 +529,7 @@ h5 {
     .upcoming {
       padding-top: 0;
       margin-top: 0;
+      height: 5%;
     }
 
     .row {
