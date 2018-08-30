@@ -10,7 +10,11 @@ module.exports = function(app) {
   app.get('/login', employee.loginPage);
   app.get('/about', metro.about);
   app.get('/projects', metro.projects);
+<<<<<<< HEAD
   // app.post('/contactus', metro.contactus);
+=======
+  app.post('/contactus', metro.contactus);
+>>>>>>> eca36a3ef5552eb662b9365f27d2bd41127913e8
   app.get('/leadership', metro.leadership);
   app.get('/equipment', metro.equipment);
 
