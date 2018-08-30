@@ -46,6 +46,16 @@
   background-color: #C8752F;
   color: ghostwhite;
   box-shadow: 2px 2px 20px grey;
+  font-size: 1vw;
+}
+
+.contactUs:hover {
+  width: 8vw;
+  height: 4vh;
+  border-radius: 5px;
+  background-color: #C8752F;
+  color: ghostwhite;
+  box-shadow: 2px 2px 20px grey;
 }
 
 .upcoming h2 {
@@ -64,7 +74,8 @@
 #map {
   width: 100%;
   height: 350px;
-  box-shadow: 5px 5px 5px 1px #BA9F89;
+  border-top:2px solid gray;
+  border-bottom: 2px solid gray;
 }
 
 /* Add projects page */
@@ -336,12 +347,12 @@ h5 {
 
 .newProjectBtn {
   height: 4vh;
-  width: auto;
+  width: 8vw;
   border-radius: 10px;
 }
 
 .newProjectBtn:hover {
-  width: 15vw;
+  width: 10vw;
   height: 5vh;
   border-radius: 10px;
   background-color: #9D9B97;
