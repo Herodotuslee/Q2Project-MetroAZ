@@ -431,6 +431,10 @@ h5 {
    font-family: Baskerville, Georgia;
 }
 
+.modal-body{
+  text-align: center;
+}
+
 .footer{
   position: -webkit-sticky; /* Safari */
   position: sticky;

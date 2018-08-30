@@ -8,13 +8,16 @@ module.exports = {
   loginPage:(req,res)=>{
     res.render("login")
   },
+  registerPage:(req,res)=>{
+    res.render("registerPage")
+  },
   register:(req, res)=>{
     knex('employee').insert({
       name:req.body.name,
       email:req.body.email,
       password:req.body.password,
     }).then(()=>{
-      res.redirect("/");
+      res.redirect("/register");
     })
   },
   login:(req,res)=>{

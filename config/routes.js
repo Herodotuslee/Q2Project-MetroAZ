@@ -22,6 +22,7 @@ module.exports = function(app) {
 
 
 //LOGIN AND LOGOUT
+  app.get('/register', employee.registerPage);
   app.post('/register', employee.register);
   app.post('/login', employee.login);
   app.post('/admin', admin.login);
