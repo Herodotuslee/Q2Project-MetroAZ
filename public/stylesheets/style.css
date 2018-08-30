@@ -14,9 +14,20 @@
   box-shadow: 2px 2px 30px grey;
 }
 
+.address {
+  padding-right: 5%;
+}
+
 .navbar {
   box-shadow: 0px 0px 10px grey;
   height: 8.5vh;
+}
+
+/* google maps */
+
+.googleMaps {
+  height: 6vh;
+  width: 10vw;
 }
 
 /* Upcoming projects bottom banner */
@@ -25,7 +36,7 @@
   padding-top: 2%;
   text-align: center;
   height: 15vh;
-  background-color: #F3EEEB;
+  background-color: #efefef;
 }
 
 .contactUs {
@@ -33,7 +44,7 @@
   height: 3vh;
   border-radius: 5px;
   background-color: #C8752F;
-  color: #F9BB85;
+  color: ghostwhite;
   box-shadow: 2px 2px 20px grey;
 }
 
@@ -49,11 +60,11 @@
 }
 
 /* Google Maps */
-#map{
-  width:100%;
-  height:400px;
-  border-top:2px solid gray;
-  border-bottom: 2px solid gray;
+
+#map {
+  width: 100%;
+  height: 350px;
+  box-shadow: 5px 5px 5px 1px #BA9F89;
 }
 
 /* Add projects page */
@@ -98,11 +109,12 @@
   color: ghostwhite;
   opacity: .8;
 }
+
 /* Contact PAGE  */
 
 .contactPage {
   margin-top: 2%;
-  margin-bottom: 1%;
+  margin-bottom: 4%;
   text-align: center;
 }
 
@@ -248,13 +260,13 @@ h5 {
 /* Main page */
 
 .indexIMG {
-  border-radius: 50%;
+  border-radius: 20%;
   box-shadow: 2px 2px 20px grey;
 }
 
 .responsive {
   width: 70%;
-  height: 90%;
+  height: 100%;
 }
 
 .responsiveTxt {
@@ -302,23 +314,22 @@ h5 {
 }
 
 /* Leadership Page */
+
 .profileContainer {
   margin-top: 3%;
   margin-bottom: 3%;
 }
 
 .profileRows {
-  margin-top: 5%;;
+  margin-top: 5%;
+  ;
 }
+
 .profile {
   height: 30vh;
   width: auto;
   border-radius: 3px;
   box-shadow: 2px 2px 30px grey;
-}
-
-.experince {
-  margin-top: 2%;
 }
 
 /* Controls Page */
@@ -334,4 +345,36 @@ h5 {
   height: 5vh;
   border-radius: 10px;
   background-color: #9D9B97;
+}
+
+/* Equipment Page */
+<<<<<<< HEAD
+.profileContainer {
+
+}
+
+.employee-box{
+  margin:2vw;
+  border-width: 1px;
+  border-color:#9D9B97;
+  border-style:solid;
+
+
+=======
+
+.equipmentContainer {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.equipIMG {
+  height: 30vh;
+  width: auto;
+  border-radius: 3px;
+  box-shadow: 2px 2px 30px grey;
+}
+
+.equipList {
+  margin-top: 5%;
+>>>>>>> eca36a3ef5552eb662b9365f27d2bd41127913e8
 }

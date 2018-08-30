@@ -58,12 +58,14 @@
 
 
 
-  <!-- Footer -->
+  <!--Bottom Banner -->
   <% include ./partials/bottomBanner %>
-  <script src="/maps/projectmap.js" defer></script>
+
+<!-- Google Maps -->
   <div id="map"></div>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4kCsomfpNUDQH2ea9JWK-xfYoZuawXeM&callback=initMap"></script>
-
+  <script src="/maps/projectmap.js" defer></script>
+  <!-- Footer -->
     <% include ./partials/footer %>
       <script type="text/javascript">
         var $item = $('.carousel-item');
