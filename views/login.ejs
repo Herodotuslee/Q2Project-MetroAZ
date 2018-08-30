@@ -11,33 +11,45 @@
   <% include ./partials/header %>
   <body class="login-page">
 
-    <div class="container" id="login-container">
+    <div class="container " id="login-container">
+      <div class="login-box">
+        <div class="employee-login-box">
+          <h3 id="login-header">Employee Login</h3>
+          <form class="login-form" action="login" method="post">
 
-      <h3 id="login-header">Employee Login</h3>
-      <form class="login-form" action="login" method="post">
+            <i class="fas fa-users fa-9x" id="login-icon"></i><br><br>
+            <input type="text" id="login-input" name="email" placeholder="EMAIL"><br><br>
+            <input type="password" id="login-input" name="password" placeholder="PASSWORD"><br><br>
 
-        <i class="fas fa-users fa-9x" id="login-icon"></i><br><br>
-        <input type="text" id="login-input" name="email" placeholder="EMAIL"><br><br>
-        <input type="password" id="login-input" name="password" placeholder="PASSWORD"><br><br>
+            <a href="/clock">
+              <button class="loginBtn" type="submit">LOGIN</button>
+            </a>
+            <br></br>
 
-        <a href="/clock">
-          <button class="loginBtn" type="submit">LOGIN</button>
-        </a>
-        <br></br>
+            <span class="psw" id="forgot"><b><a href="#">Forgot password?</a></b></span><br><br>
+          </form>
+          <br>
 
-        <span class="psw" id="forgot"><b><a href="#">Forgot password?</a></b></span><br><br>
-      </form>
-      <br>
-      <h3 id="login-header">Admin Login</h3>
-      <form class="login-form" action="admin" method="post">
-        <i class="fas fa-users fa-9x" id="login-icon"></i><br><br>
-        <input type="text" id="login-input" name="email" placeholder="EMAIL"><br><br>
-        <input type="password" id="login-input" name="password" placeholder="PASSWORD"><br><br>
-        <a href="/inbox">
-          <button class="loginBtn" type="submit">LOGIN</button>
-        </a><br></br>
-        <span class="psw" id="forgot"><a href="#">Forgot password?</a></span><br><br>
-      </form>
+        </div>
+
+        <div class="admin-login-box">
+          <h3 id="login-header">Admin Login</h3>
+          <form class="login-form" action="admin" method="post">
+            <i class="fas fa-users fa-9x" id="login-icon"></i><br><br>
+            <input type="text" id="login-input" name="email" placeholder="EMAIL"><br><br>
+            <input type="password" id="login-input" name="password" placeholder="PASSWORD"><br><br>
+            <a href="/inbox">
+              <button class="loginBtn" type="submit">LOGIN</button>
+            </a><br></br>
+            <span class="psw" id="forgot"><a href="#">Forgot password?</a></span><br><br>
+          </form>
+
+        </div>
+
+
+      </div>
+
+
     </div>
 
 </body>
