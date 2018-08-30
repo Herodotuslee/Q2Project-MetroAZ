@@ -348,6 +348,19 @@ h5 {
 }
 
 /* Equipment Page */
+<<<<<<< HEAD
+.profileContainer {
+
+}
+
+.employee-box{
+  margin:2vw;
+  border-width: 1px;
+  border-color:#9D9B97;
+  border-style:solid;
+
+
+=======
 
 .equipmentContainer {
   margin-top: 3%;
@@ -363,4 +376,5 @@ h5 {
 
 .equipList {
   margin-top: 5%;
+>>>>>>> eca36a3ef5552eb662b9365f27d2bd41127913e8
 }
