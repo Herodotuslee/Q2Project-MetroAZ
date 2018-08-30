@@ -17,7 +17,6 @@
 
   <div class="">
     <%for(let i=0; i< result.length; i++){%>
-      <p>x</p>
       <h4><%=result[i].name%></h4>
       <p><%=result[i].content%></p>
       <hr>
@@ -26,10 +25,10 @@
       </form> -->
       <div class="inbox-stuff">
       <form class="" action="/inbox/complete/<%=result[i].id%>" method="post">
-        <button  class='btn btn-primary' type="submit" name="button">read</button>
+        <button  class='inboxBtns' type="submit" name="button">read</button>
       </form>
       <form class="" action="/inbox/delete/<%=result[i].id%>" method="get">
-        <button class='btn btn-danger'type="submit" name="button">X</button>
+        <button class='inboxBtns'type="submit" name="button">Delete</button>
       </form>
 
     <%}%>

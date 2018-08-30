@@ -382,7 +382,11 @@ h5 {
 /* Controls Page */
 
 .controlCont {
+<<<<<<< HEAD
   margin-bottom: 7%;
+=======
+  margin-top: 5%;
+>>>>>>> f8c1e210abcdb1fafb4cbba7e46c80206ddcba5e
 }
 
 .newProjectBtn {
@@ -392,8 +396,8 @@ h5 {
 }
 
 .newProjectBtn:hover {
-  width: 10vw;
   height: 5vh;
+  width: 9vw;
   border-radius: 10px;
   background-color: #9D9B97;
 }
@@ -446,7 +450,14 @@ h5 {
     margin:3vh auto;
 }
 
+.project-box-btn{
+  /* margin:0px auto; */
+  text-align: center;
+}
 
+.control-btn{
+  width:10vw;
+}
 #clock {
    text-align: center;
    margin-top: 1vh;
@@ -489,6 +500,10 @@ h5 {
 
     .logo-text-after{
        display:inline-block;
+    }
+
+    .aboutTxt {
+      height: 500px;
     }
 }
 

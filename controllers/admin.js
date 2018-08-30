@@ -16,7 +16,6 @@ module.exports = {
         }
       })
   },
-
   logout: (req, res) => {
     // res.send('ok')
     req.session.admin_id = null;
@@ -82,9 +81,7 @@ module.exports = {
         item.date=moment(item.date).format("YYYY-MM-DD")
       })
       res.render('afterSearchData',{result})
-
     })
-
   },
   timeLog:(req,res)=>{
     knex('employee').where('id',req.params.employee_id)
