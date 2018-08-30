@@ -45,17 +45,15 @@
           <li class="nav-item">
             <a  class="nav-link" href="/contact">Contact Us</a>
           </li>
+<!-- LET LOGIN DISAPPEAR          -->
           <%if(isBoss||isemployee){%>
-
           <%}else{%>
             <li class="nav-item">
               <a class="nav-link" href="/login">login</a>
             </li>
           <%}%>
-
-
         </ul>
-
+<!-- FOR BOSS -->
         <%if(isBoss){%>
           <li class="nav-item">
             <a class="nav-link" href="/inbox">INBOX</a>
@@ -67,6 +65,7 @@
            <a  class="nav-link" href="/logout">logout</a>
          </li>
         <%}%>
+<!-- FOR EMPLOYEE       -->
       <%if(isemployee){%>
         <li class="nav-item">
           <a class="nav-link" href="/clock">CLOCK</a>
@@ -75,12 +74,5 @@
           <a  class="nav-link" href="/logout">logout</a>
         </li>
       <%}%>
-
-
-
-
-
-
-
       </div>
     </nav>
