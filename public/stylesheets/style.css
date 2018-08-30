@@ -18,6 +18,16 @@ body {
     overflow-x: hidden;
 }
 
+.hamburger {
+  /* background-color:black; */
+
+}
+
+.hamLinks{
+  background-color: white;
+  border-radius: 5px;
+  z-index: 500000000;
+}
 
 .metroLogo {
   height: 4vh;
@@ -154,7 +164,7 @@ body {
   border-radius: 5px;
 }
 
-.contactForm button {
+.contactForm  {
   width: 80px;
   border-radius: 5px;
 }
@@ -178,50 +188,47 @@ body {
   background-color: grey;
 }
 
-/* LOGIN PAGE */
+/* LOGIN Modal */
 
-.login-page {
-  background-image: url(https://images.unsplash.com/photo-1518572582339-a0ad3c52a27a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b1f2ee8ed0ba9535ca2cb318dcffe451&auto=format&fit=crop&w=1778&q=80);
-  background-position: center;
-  background-size: cover;
-}
-
-#login-icon {
+.myModal {
   color: white;
+  background-color: #404040;
+  opacity: .9;
+  margin-top: 30%;
+  text-align: center;
+  padding-top: 10%;
+  border-radius: 5%;
 }
 
-#login-input {
-  font-size: 14px;
+.myModal input {
+  border-radius: 5px;
+}
+.modalHeader {
+  color: white;
   text-align: center;
 }
 
-.loginBtn {
-  height: 30px;
-  width: 120px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.loginBtn:hover {
-  background-color: grey;
-}
-
-#forgot {
-  font-size: 20px;
-}
-
-#login-header {
+.modalBtn {
+  background-color: #0070FF;
   color: white;
+  border-radius: 5px;
+  margin-bottom: 5%;
 }
 
-.login-form {
-  background: rgba(0, 0, 0, 0.5);
-  border-color: black;
-  border-style: solid;
-  border-radius: 10px;
-  height: 330px;
-  width: 240px;
+.closeBtn {
+  border-radius: 5px;
+  background-color: #A8A8A8;
 }
+
+.psw {
+  color: ghostwhite;
+  margin-top: 2%;
+}
+
+.modal {
+  text-align: center;
+}
+
 
 /* INBOX.EJS */
 
@@ -300,6 +307,9 @@ h5 {
 .responsive {
   width: 70%;
   height: 100%;
+}
+.red{
+  background-color: red;
 }
 
 .responsiveTxt {
@@ -449,7 +459,13 @@ h5 {
   bottom:0;
 }
 
-
+.employee-box{
+  margin:3em;
+  border-style: solid;
+  border-width: 1px;
+  padding:1em;
+  text-align: center;
+}
 .logo-text{
    display:inline-block;
 }
@@ -461,9 +477,7 @@ h5 {
     background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
 } */
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
+
     .metroLogo {
       height: 2em;
       margin-right:2em;
@@ -479,17 +493,35 @@ h5 {
 }
 
 @media only screen and (max-width: 480px) {
-    body {
-        background-color: red;
-    }
     .metroLogo {
       height: 1.5em;
       margin-right:2em;
       /* font-size: 2vh; */
     }
     .logo-text{
-      visibility: hidden;;
+      visibility: hidden;
+    }
 
+    .aboutTxt {
+      height: 100vh;
+    }
+
+    .indexIMG {
+      width: 25vw;
+      height: 25vh;
+    }
+
+    .upcoming {
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .row {
+      height: 35vh;
+    }
+
+    .parallax {
+      height: 20vh;
     }
     /* .logo-text:after{
       font-size:2vh;

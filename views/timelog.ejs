@@ -60,10 +60,14 @@
       </tr>
 
     <%}else{%>
-      <td><%=item.date%></td>
-      <td>X</td>
-      <td><%=item.clockout_time.slice(0,5)%></td>
-      <td><%=item.workingtime%> HOURS</td>
+      <tr>
+        <td><%=item.date%></td>
+        <td>X</td>
+        <td><%=item.clockout_time.slice(0,5)%></td>
+        <td><%=item.workingtime%> HOURS</td>
+
+      </tr>
+
     <%}%>
   <%})%>
 </table>

@@ -1,11 +1,11 @@
 
 <% include ./partials/header %>
-<div class="alert alert-success alert-dismissible fade show" role="alert">
+<!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
   <strong>Successed Logined in!</strong> Welcome to Metro AZ
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
-</div>
+</div> -->
 <% include ./partials/topBanner %>
 
 
@@ -32,23 +32,46 @@
   <%}%>
 
   </div>
-
+  <%if((result)==false){%>
+      <%}else{%>
   <div class="log-box">
+    <table class="table table-hover">
+  <thead class="table-success">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Clock In </th>
+      <th scope="col">Clock Out</th>
+      <th scope="col">Working Hours</th>
+      <th scope="col">$</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <%for(let i=0;i< result.length;i++){%>
+      <%if(result[i].clockin_time){%>
+        <tr>
+          <td><%=result[i].date%></td>
+          <td><%=result[i].clockin_time.slice(0,5)%></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
 
-    <%if((result)==false){%>
-    <%}else{%>
-      <h1>TODAY IS <%=result[0].date%></h1>
-      <%result.forEach((item)=>{%>
-        <%if(item.clockin_time){%>
-            <h4>Clock in at <%=item.clockin_time.slice(0,5)%></h4><br>
-        <%}else{%>
-            <h4>Clock out at <%=item.clockout_time.slice(0,5)%></h4><br>
-            <h4>Today you worked <%=item.workingtime%> Hours</h4><br>
-            <h4>You got $<%=item.workingtime*15%> Today</h4>
-        <%}%>
-      <%})%>
+        </tr>
+
+      <%}else{%>
+        <tr>
+          <td><%=result[i].date%></td>
+          <td></td>
+          <td><%=result[i].clockout_time.slice(0,5)%></td>
+          <td><%=result[i].workingtime%></td>
+          <td>$<%=result[i].workingtime*15%></td>
+        </tr>
+      <%}%>
     <%}%>
+  </tbody>
+</table>
+<%}%>
 
 
   </div>

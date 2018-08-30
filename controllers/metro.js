@@ -1,4 +1,5 @@
 const knex = require("../db/knex.js");
+const mailer = require('../mailer.js');
 
 module.exports = {
   // CHANGE ME TO AN ACTUAL FUNCTION
@@ -22,11 +23,19 @@ module.exports = {
   },
   contactus:(req,res)=>{
     knex('inbox').insert({
+      // console.log('1')
       name: req.body.name,
       email: req.body.email,
       content: req.body.content,
-    }).then(() => {
-      res.redirect("/");
+    })
+    .then((results) => {
+        console.log('2')
+      return mailer(req.body.email)
+        console.log('3')
+    })
+    .then(()=> {
+        console.log('4')
+      res.redirect('/')
     })
   },
   // Projects
