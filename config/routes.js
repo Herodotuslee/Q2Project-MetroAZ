@@ -78,7 +78,7 @@ function addisEmployee(req,res,next){
 
 function authenticateAdmin(req, res, next) {
   if (!(req.session.admin_id)) {
-    res.redirect('/login')
+    res.redirect('/')
   } else {
     next();
   }

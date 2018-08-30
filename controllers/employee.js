@@ -38,7 +38,7 @@ module.exports = {
     req.session.employee_id=null;
     req.session.save(()=>{
       // res.send('ok')
-      res.redirect("/login")
+      res.redirect("/")
     })
   },
 
