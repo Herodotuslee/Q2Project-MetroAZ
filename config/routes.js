@@ -4,6 +4,8 @@ const metro = require("../controllers/metro.js");
 const admin = require("../controllers/admin.js")
 module.exports = function(app) {
   app.use(addisEmployee);
+    app.get('/test', metro.test);
+
 
 // FOR EVERYONE CAN SEE
   app.get('/', metro.index);
@@ -55,7 +57,6 @@ module.exports = function(app) {
   // app.get('/control/clock/search/:employee_id',admin.test);
   // app.get('/test/:employee_id',admin.test);
 }
-
 
 
 function authenticateEmployee(req, res, next) {

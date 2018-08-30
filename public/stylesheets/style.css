@@ -7,7 +7,7 @@
 /* Header */
 
 .metroLogo {
-  height: 60px;
+  height: 4vh;
 }
 
 .topNav {
@@ -376,7 +376,7 @@ h5 {
   margin-top: 5%;
 }
 
-/* Albert's messy CSS */
+/* ALBERT CSS PLAYGROUND */
 .login-box{
   display: flex;
   flex-direction: column;
@@ -412,4 +412,19 @@ h5 {
    margin-top: 1vh;
    font-size: 8vh;
    font-family: Baskerville, Georgia;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    .metroLogo {
+      height: 2vh;
+      /* font-size: 2vh; */
+    }
+    .logo-text{
+      font-size:2vh;
+      content:'METRO';
+
+    }
 }
