@@ -372,6 +372,10 @@ h5 {
 
 /* Controls Page */
 
+.controlCont {
+  margin-top: 5%;
+}
+
 .newProjectBtn {
   height: 4vh;
   width: 8vw;
@@ -379,8 +383,8 @@ h5 {
 }
 
 .newProjectBtn:hover {
-  width: 10vw;
   height: 5vh;
+  width: 9vw;
   border-radius: 10px;
   background-color: #9D9B97;
 }
@@ -481,6 +485,10 @@ h5 {
 
     .logo-text-after{
        display:inline-block;
+    }
+
+    .aboutTxt {
+      height: 500px;
     }
 }
 
