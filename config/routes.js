@@ -62,7 +62,7 @@ module.exports = function(app) {
 
 function authenticateEmployee(req, res, next) {
   if (!req.session.employee_id && !req.session.admin_id) {
-    res.redirect('/login')
+    res.redirect('/')
   } else {
     next();
   }
