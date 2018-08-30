@@ -6,10 +6,10 @@
 <%result.forEach((item)=>{%>
   <%if((item.clockin_time)){%>
     <h4>Clockin</h4>
-      <p><%=item.clockin_time.slice(1,5)%></p>
+      <p><%=item.clockin_time.slice(0,5)%></p>
   <%}else{%>
     <h4>Clockout</h4>
-    <p><%=item.clockout_time.slice(1,5)%></p>
+    <p><%=item.clockout_time.slice(0,5)%></p>
   <%}%>
   <%if(item.workingtime){%>
     <h4>Working Time</h4>

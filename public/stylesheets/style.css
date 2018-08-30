@@ -7,7 +7,7 @@
 /* Header */
 
 .metroLogo {
-  height: 60px;
+  height: 4vh;
 }
 
 .topNav {
@@ -376,6 +376,13 @@ h5 {
   margin-top: 5%;
 }
 
+/* ALBERT CSS PLAYGROUND */
+.login-box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
 .clock-in-box{
   display: flex;
   flex-direction: column;
@@ -397,4 +404,36 @@ h5 {
     /* display: block; */
     text-align: left;
     margin:3vh auto;
+}
+
+
+#clock {
+   text-align: center;
+   margin-top: 1vh;
+   font-size: 8vh;
+   font-family: Baskerville, Georgia;
+}
+
+.footer{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  bottom:0;
+}
+
+.navbar.navbar-2 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    .metroLogo {
+      height: 2vh;
+      /* font-size: 2vh; */
+    }
+    .logo-text{
+      font-size:2vh;
+      content:'METRO';
+
+    }
 }

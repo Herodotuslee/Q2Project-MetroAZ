@@ -2,10 +2,6 @@ const knex = require("../db/knex.js");
 const moment = require('moment');
 
 module.exports = {
-  adminPage: (req, res) => {
-    res.render('admin')
-  },
-
   login: (req, res) => {
     knex('admin').where("email", req.body.email)
       .then((result) => {
@@ -20,7 +16,7 @@ module.exports = {
         }
       })
   },
-  
+
   logout: (req, res) => {
     // res.send('ok')
     req.session.admin_id = null;
@@ -58,6 +54,7 @@ module.exports = {
       res.render('control',{result})
     })
   },
+// WAIT FOR DELETE
   employeeInfo:(req,res)=>{
     knex('employee').where('id',req.params.employee_id)
     .then((emeplyresult)=>{
@@ -72,6 +69,7 @@ module.exports = {
           })
     })
   },
+// WAIT FOR DELETE
   searchDate:(req,res)=>{
     console.log(req.query)
     knex('clock').where({
@@ -87,8 +85,20 @@ module.exports = {
 
     })
 
-  }
-
-
+  },
+  timeLog:(req,res)=>{
+    knex('employee').where('id',req.params.employee_id)
+    .then((emeplyresult)=>{
+      return knex('clock').where('employee_id',req.params.employee_id)
+          .then((result)=>{
+            if(result.length){
+              result.forEach(item=>{
+                item.date=moment(item.date).format("YYYY-MM-DD")
+              })
+              res.render("timeLog",{result,employeename:emeplyresult[0]})
+            }
+          })
+    })
+  },
 
 }
