@@ -16,6 +16,7 @@ module.exports = {
         }
       })
   },
+
   logout: (req, res) => {
     // res.send('ok')
     req.session.admin_id = null;
