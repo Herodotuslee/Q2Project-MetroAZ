@@ -55,7 +55,9 @@ module.exports = {
       mm = '0'+mm
   }
   today = yyyy + '-' + mm + '-' + dd;
-    knex('clock').where('date',today)
+    knex('clock').where({'date':today,
+    'employee_id':req.session.employee_id
+  })
     .then((result)=>{
       if(result.length){
         result.forEach(item=>{
