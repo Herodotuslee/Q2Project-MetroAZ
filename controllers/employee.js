@@ -20,14 +20,16 @@ module.exports = {
       res.redirect("/register");
     })
   },
+
   login:(req,res)=>{
     knex('employee').where("email",req.body.email)
     .then((result)=>{
       let employee = result[0];
       if(employee.password===req.body.password){
         req.session.employee_id=employee.id;
+        req.session.save(() =>
+        res.redirect('/clock'))
         // res.send('ok')
-        res.redirect("/clock")
       }else{
         res.redirect("/");
         // ADD~SHOW WRONG PASSWORD

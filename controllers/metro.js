@@ -29,12 +29,9 @@ module.exports = {
       content: req.body.content,
     })
     .then((results) => {
-        console.log('2')
-      return mailer(req.body.email)
-        console.log('3')
+      return mailer(req.body.email, req.body.name)
     })
     .then(()=> {
-        console.log('4')
       res.redirect('/')
     })
   },

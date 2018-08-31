@@ -62,8 +62,11 @@
                     <%if(isBoss||isemployee){%>
 
                       <%}else{%>
+
+                        <!--  EMPLOYEE LOGIN MODAL-->
+
                         <li class="nav-item">
-                          <a class="nav-link hamLinks" data-toggle="modal" data-target="#myModal" href="/login">login</a>
+                          <a class="nav-link hamLinks" data-toggle="modal" data-target="#myModal" href="/login">Employee</a>
                           <!-- Modal -->
                           <div class="modal" id="myModal">
                             <div class="modal-dialog">
@@ -79,17 +82,54 @@
 
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                  <form action="login" method="post">
+                                  <form action="/login" method="post">
 
-                                    <!-- <i class="fas fa-users fa-9x" id="login-icon"></i><br><br> -->
-                                    <input type="text" name="email" placeholder="EMAIL"><br><br>
-                                    <input type="password" name="password" placeholder="PASSWORD"><br><br>
+                                    <input type="text" name="email" placeholder="EMAIL"><br>
+                                    <input type="password" name="password" placeholder="PASSWORD"> <br>
 
-                         <button class="btn modalBtn" type="submit">LOGIN</button>
-                       </a>
-                                    <br>
-                                    <a class="psw" href="#">Forgot password?</a></b>
+                                    <button class="btn modalBtn" type="submit">LOGIN</button>
+                                    </a>
+
                                   </form>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn closeBtn" data-dismiss="modal">Close</button>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+
+
+                        <!-- ADMIN LOGIN MODAL -->
+
+                        <li class="nav-item">
+                          <a class="nav-link hamLinks" data-toggle="modal" data-target="#adminModal" href="/admin">Admin</a>
+                          <!-- Modal -->
+                          <div class="modal" id="adminModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content myModal">
+
+                                <!-- Modal Header -->
+                                <div class="modal-head">
+                                  <h4 class="modalHeader modal-title">
+                                    <i class="fas fa-users fa-9x" id="login-icon"></i>
+                                  </h4>
+
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  <form class="login-form" action="/admin" method="post">
+                                    <input type="text" id="login-input" name="email" placeholder="EMAIL"><br><br>
+                                    <input type="password" id="login-input" name="password" placeholder="PASSWORD"><br>
+                                      <button class="loginBtn modalBtn" type="submit">LOGIN</button>
+
+                                    </form>
                                 </div>
 
                                 <!-- Modal footer -->

@@ -68,6 +68,7 @@ function authenticateEmployee(req, res, next) {
   }
 }
 function addisEmployee(req,res,next){
+  console.log(req.url)
   res.locals ={
     isemployee:(req.session.employee_id),
     isBoss:(!!req.session.admin_id),

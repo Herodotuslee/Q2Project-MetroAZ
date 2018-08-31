@@ -3,19 +3,22 @@ const moment = require('moment');
 
 module.exports = {
   login: (req, res) => {
+    console.log("HELLO!!")
     knex('admin').where("email", req.body.email)
       .then((result) => {
+        console.log(result)
         let admin = result[0];
         if (admin.password === req.body.password) {
           req.session.admin_id = admin.id;
-          // res.send('ok')
-          res.redirect("/control")
+          req.session.save(() =>
+          res.redirect('/control'))
         } else {
           res.redirect("/");
           // ADD~SHOW WRONG PASSWORD
         }
       })
   },
+
   logout: (req, res) => {
     // res.send('ok')
     req.session.admin_id = null;

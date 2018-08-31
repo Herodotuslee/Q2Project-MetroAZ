@@ -154,20 +154,25 @@ body {
 }
 
 .contactForm input {
-  width: 300px;
+  width: 25vw;
   margin-bottom: .5%;
   border-radius: 5px;
 }
 
 .contactForm textarea {
-  width: 500px;
+  width: 25vw;
   border-radius: 5px;
 }
 
 .contactForm  {
-  width: 80px;
   border-radius: 5px;
   text-align: center;
+  padding-bottom: 2%
+}
+
+.contactBtn {
+  width: 4vw;
+  border-radius: 5px;
 }
 
 /* Inbox page  */
@@ -382,11 +387,8 @@ h5 {
 /* Controls Page */
 
 .controlCont {
-<<<<<<< HEAD
   margin-bottom: 7%;
-=======
   margin-top: 5%;
->>>>>>> f8c1e210abcdb1fafb4cbba7e46c80206ddcba5e
 }
 
 .newProjectBtn {
