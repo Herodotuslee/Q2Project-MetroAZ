@@ -34,19 +34,27 @@ module.exports = function(app) {
   app.use(authenticateEmployee);
 
 //EMPLOYEE AUTHORIZATION
+// CLOCK
+app.get('/clock', employee.clockPage);
+app.post('/clock/in', employee.clockIn);
+app.post('/clock/out/:final_id', employee.clockOut);
+// INBOX
+app.get('/inbox/unread',employee.inbox);
+app.get('/inbox/achive',employee.inboxread);
+app.get('/inbox/completed',employee.inboxcompleted);
 
-  // CLOCK
-  app.get('/clock', employee.clockPage);
-  app.post('/clock/in', employee.clockIn);
-  app.post('/clock/out/:final_id', employee.clockOut);
-  // INBOX
-  app.get('/inbox',employee.inbox);
-  app.get('/inbox/read',employee.inboxread);
-  app.get('/inbox/completed',employee.inboxcompleted);
-  // INBOX ACTION
-  app.post('/inbox/read/:message_id',employee.toread);
-  app.post('/inbox/complete/:message_id',employee.tocomplete);
-  app.get('/inbox/delete/:message_id',employee.todelete);
+//THE ACTION FROM UNREAD INBOX TO SOMEWHERE
+app.post('/inbox/unread/achive/:message_id',employee.toAchiveinUnread);
+app.get('/inbox/unread/delete/:message_id',employee.todeleteinUnread);
+
+//THE ACTION  FROM ACHIVE INBOX TO SOMEWHERE
+app.post('/inbox/archive/complete/:message_id',employee.theCompleteinArhive);
+app.get('/inbox/archive/delete/:message_id',employee.theDeleteinArchive);
+app.post('/inbox/archive/unread/:message_id',employee.theUnReadinArchived);
+
+//THE ACTION FROM COMPLETED INBOX TO SOMEWHERE
+app.get('/inbox/completed/delete/:message_id',employee.theDeleteinCompleted);
+app.post('/inbox/completed/archive/:message_id',employee.theArchiveinCompleted);
 
 //BOSS AUTHORIZATION
   app.use(authenticateAdmin);

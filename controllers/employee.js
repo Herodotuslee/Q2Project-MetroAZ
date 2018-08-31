@@ -124,9 +124,9 @@ module.exports = {
 //TODAY'S WORKING HOURS
 
 
-// INBOX
+// INBOX PAGES
 
-//INBOX DEFAULT IS UNREAD
+  //INBOX DEFAULT IS UNREAD PAGE
   inbox:(req,res)=>{
     knex('inbox').where('status','unread')
     .then((result)=>{
@@ -134,41 +134,77 @@ module.exports = {
     })
   },
 
-//INBOX READ
+  //INBOX ACHIVE PAGE
   inboxread:(req,res)=>{
     knex('inbox').where('status','read')
     .then((result)=>{
       res.render('inboxread',{result})
     })
   },
-// INBOX COMPLETED
+  // INBOX COMPLETED PAGE
   inboxcompleted:(req,res)=>{
     knex('inbox').where('status','completed')
     .then((result)=>{
       res.render('inboxcompleted',{result})
     })
   },
-  toread:(req,res)=>{
+
+// UNREAD PAGE ACTION
+  toAchiveinUnread:(req,res)=>{
     knex('inbox').where('id',req.params.message_id).update(
       {
         status:'read',
       }
     ).then(()=>{
-      res.redirect('/inbox')
+      res.redirect('/inbox/unread')
     })
   },
-  tocomplete:(req,res)=>{
+  todeleteinUnread:(req,res)=>{
+    knex('inbox').where('id',req.params.message_id).del()
+    .then(()=>
+    res.redirect('/inbox/unread'))
+  },
+
+// THE ACTION IN ARCHIVE PAGE
+  theCompleteinArhive:(req,res)=>{
     knex('inbox').where('id',req.params.message_id).update(
   {
         status:'completed',
       }
     ).then(()=>{
-      res.redirect('/inbox/read')
+      res.redirect('/inbox/achive')
     })
   },
-  todelete:(req,res)=>{
+  theDeleteinArchive:(req,res)=>{
+    knex('inbox').where('id',req.params.message_id).del()
+    .then(()=>
+    res.redirect('/inbox/achive'))
+  },
+  theUnReadinArchived:(req,res)=>{
+    knex('inbox').where('id',req.params.message_id).update(
+  {
+        status:'unread',
+      }
+    ).then(()=>{
+      res.redirect('/inbox/achive')
+    })
+  },
+
+// THE ACTION IN COMPLETED PAGE
+  theDeleteinCompleted:(req,res)=>{
     knex('inbox').where('id',req.params.message_id).del()
     .then(()=>
     res.redirect('/inbox/completed'))
   },
+  theArchiveinCompleted:(req,res)=>{
+    knex('inbox').where('id',req.params.message_id).update(
+  {
+        status:'read',
+      }
+    ).then(()=>{
+      res.redirect('/inbox/completed')
+    })
+  },
+
+
 }

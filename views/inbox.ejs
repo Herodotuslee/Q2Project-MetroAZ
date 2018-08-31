@@ -1,12 +1,10 @@
 <% include ./partials/header %>
-
-  <body class="inbox-ejs">
     <div class="container" id="inbox-container">
       <div class="btn">
-        <a href="/inbox">Unread</button></a>
+        <a href="/inbox/unread">Unread</button></a>
       </div>
       <div class="btn">
-        <a href="/inbox/read">Archive</a>
+        <a href="/inbox/achive">Archive</a>
       </div>
       <div class="btn">
         <a href="/inbox/completed">Completed</a>
@@ -28,10 +26,10 @@
             <br>
 
             <!-- Buttons -->
-            <form action="/inbox/read/<%=result[i].id%>" method="post">
+            <form action="/inbox/unread/achive/<%=result[i].id%>" method="post">
               <button class="inboxBtns" type="submit" name="button">Save</button>
             </form>
-            <form action="/inbox/delete/<%=result[i].id%>" method="get">
+            <form action="/inbox/unread/delete/<%=result[i].id%>" method="get">
               <button class="inboxBtns" type="submit" name="button">Delete</button>
             </form>
 
@@ -41,4 +39,4 @@
     </div>
 
 
-              <% include ./partials/footer %>
+<% include ./partials/footer %>

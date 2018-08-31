@@ -1,42 +1,40 @@
 <% include ./partials/header %>
-<body class="inbox-ejs">
-<div class="container" id="inbox-container">
-  <div class="row">
-    <div class="col-12">
-    <div class="btn">
-      <a   href="/inbox">Unread</a>
+    <div class="container" id="inbox-container">
+      <div class="btn">
+        <a href="/inbox/unread">Unread</button></a>
+      </div>
+      <div class="btn">
+        <a href="/inbox/achive">Archive</a>
+      </div>
+      <div class="btn">
+        <a href="/inbox/completed">Completed</a>
+      </div>
     </div>
-    <div class="btn">
-      <a  href="/inbox/read">Archive</a>
+
+    <br><br>
+
+
+    <!-- Responsive grid -->
+
+    <div class="container">
+
+      <div class="row">
+<% for(var i = 0; i<result.length; i++){ %>
+          <div class="col-4 inbox">
+            <h4><%= result[i].name %></h4>
+            <b class=""><%= result[i].content %></b>
+            <br>
+            <!-- Buttons -->
+            <form class="" action="/inbox/completed/archive/<%=result[i].id%>" method="post">
+              <button  class='inboxBtns' type="submit" name="button">Archive</button>
+            </form>
+            <form class="" action="/inbox/completed/delete/<%=result[i].id%>" method="get">
+              <button class='inboxBtns'type="submit" name="button">Delete</button>
+            </form>
+          </div>
+          <% } %>
+      </div>
     </div>
-    <div  class="btn">
-      <a href="/inbox/completed">Completed</a>
-    </div>
-  </div>
-  </div>
 
-  <div class="">
-    <%for(let i=0; i< result.length; i++){%>
-      <h4><%=result[i].name%></h4>
-      <p><%=result[i].content%></p>
-      <hr>
-      <!-- <form class="" action="/inbox/read/<%=result[i].id%>" method="post">
-        <button type="submit" name="button">unread</button>
-      </form> -->
-      <div class="inbox-stuff">
-      <form class="" action="/inbox/complete/<%=result[i].id%>" method="post">
-        <button  class='inboxBtns' type="submit" name="button">read</button>
-      </form>
-      <form class="" action="/inbox/delete/<%=result[i].id%>" method="get">
-        <button class='inboxBtns'type="submit" name="button">Delete</button>
-      </form>
 
-    <%}%>
-
-  </div>
-</div>
-
-</div>
-<br><br>
-</body>
 <% include ./partials/footer %>
