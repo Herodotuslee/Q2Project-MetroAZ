@@ -2,50 +2,6 @@
 
 
   <div class="container-fluid login-page">
-
-
-    <!-- Button to Open the Modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-      Open modal
-    </button>
-
-    <!-- The Modal -->
-    <div class="modal" id="myModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Employee Login</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-
-          <!-- Modal body -->
-          <div class="modal-body">
-            <form  action="login" method="post">
-
-              <!-- <i class="fas fa-users fa-9x" id="login-icon"></i><br><br> -->
-              <input type="text" name="email" placeholder="EMAIL"><br><br>
-              <input type="password"  name="password" placeholder="PASSWORD"><br><br>
-
-              <a href="/clock">
-                <button class="btn btn-outline-secondary" type="submit">LOGIN</button>
-              </a>
-              <br>
-              <span class="psw" id="forgot"><b><a href="#">Forgot password?</a></b></span><br><br>
-            </form>
-          </div>
-
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-
     <div class="login-box">
 
 <!--EMPLOYEE LOGIN -->
@@ -58,7 +14,7 @@
           <input type="password" id="login-input" name="password" placeholder="PASSWORD"><br><br>
 
           <a href="/clock">
-            <button class="loginBtn" type="submit">LOGIN</button>
+            <button class="btn" type="submit">LOGIN</button>
           </a>
           <br>
           <span class="psw" id="forgot"><b><a href="#">Forgot password?</a></b></span><br><br>
@@ -71,10 +27,19 @@
         <form class="login-form" action="admin" method="post">
           <i class="fas fa-users fa-9x" id="login-icon"></i><br><br>
           <input type="text" id="login-input" name="email" placeholder="EMAIL"><br><br>
+<<<<<<< HEAD
           <input type="password" id="login-input" name="password" placeholder="PASSWORD">
             <button class="loginBtn" type="submit">LOGIN</button>
 
           </form>
+=======
+          <input type="password" id="login-input" name="password" placeholder="PASSWORD"><br><br>
+          <a href="/inbox">
+            <button class="btn" type="submit">LOGIN</button>
+          </a><br>
+          <span class="psw" id="forgot"><a href="#">Forgot password?</a></span><br><br>
+        </form>
+>>>>>>> 71d83722ce008676b226fe5e7aa083507a8c3db0
       </div>
 
     </div>

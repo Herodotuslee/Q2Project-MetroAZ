@@ -62,7 +62,7 @@ module.exports = function(app) {
 
 function authenticateEmployee(req, res, next) {
   if (!req.session.employee_id && !req.session.admin_id) {
-    res.redirect('/login')
+    res.redirect('/')
   } else {
     next();
   }
@@ -79,7 +79,7 @@ function addisEmployee(req,res,next){
 
 function authenticateAdmin(req, res, next) {
   if (!(req.session.admin_id)) {
-    res.redirect('/login')
+    res.redirect('/')
   } else {
     next();
   }

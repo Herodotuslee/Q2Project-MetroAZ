@@ -10,8 +10,13 @@ module.exports = {
         let admin = result[0];
         if (admin.password === req.body.password) {
           req.session.admin_id = admin.id;
+<<<<<<< HEAD
           req.session.save(() =>
           res.redirect('/control'))
+=======
+          // res.send('ok')
+          res.redirect("/")
+>>>>>>> 71d83722ce008676b226fe5e7aa083507a8c3db0
         } else {
           res.redirect("/");
           // ADD~SHOW WRONG PASSWORD
