@@ -12,8 +12,7 @@ module.exports = {
           req.session.admin_id = admin.id;
           req.session.save(() =>
           res.redirect('/control'))
-          // res.send('ok')
-          res.redirect("/")
+
         } else {
           res.redirect("/");
           // ADD~SHOW WRONG PASSWORD
