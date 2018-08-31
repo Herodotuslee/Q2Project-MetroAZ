@@ -27,15 +27,16 @@
                 Delete
             </button></a>
             <%}%>
-
+            <div class="caption-card">
             <h5 class="caption">
               <%= project[i].name %></h5>
-            <span class="text-muted caption"> <%= project[i].address
+            <span class="text-muted-caption"> <%= project[i].address
           %></span></h2>
             <p class="lead description caption">
               <%= project[i].description %>
             </p>
           </div>
+        </div>
         </div>
         <% } %>
     </div>
@@ -65,7 +66,7 @@
 <!-- Google Maps -->
 <div class="row">
   <div class="col-12">
-<h6 id="currentandrecent">Current and Recent Projects</h6>
+<h6 id="currentandrecent">Recent Projects</h6>
 </div>
 </div>
   <div id="map"></div>

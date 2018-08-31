@@ -104,14 +104,33 @@ body {
 
 /* Add projects page */
 
-.caption {
-  background-color: white;
-  opacity: .8;
-  border-radius: 5px;
+/* .caption {
+  /* background-color: white; */
+  /* opacity: .8; */
+  /* border-radius: 5px; */
+  /* font-size:19px;
+  margin-bottom:2vh;
+  color:white; */
+/* } */
+
+.caption-card{
+  text-align: center;
+  background-color:#1F9BCF;
+  color:white;
+  opacity:0.8;
+}
+
+.caption{
+  color:white;
+}
+
+.text-muted-caption{
+  color:white;
 }
 
 .description {
-  color: #2e242c;
+  /* color: #2e242c; */
+  color:white;
 }
 
 .add {
